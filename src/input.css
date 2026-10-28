@@ -1,3 +1,11 @@
+/* ==========================================================================
+   Personal Developer Portfolio - Visual Design System
+   Datheon Full Stack Web Development Internship
+   Stack: HTML5, Tailwind CSS v3, Vanilla JavaScript (ES6+)
+   Design System: Obsidian Canvas / Indigo & Cyan Accents
+   Standards: WCAG 2.2 Level AA Accessible | Zero Runtime Dependencies
+   ========================================================================== */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,48 +15,63 @@
     color-scheme: dark light;
     
     /* Dark Theme Palette (Default Specification in space-separated RGB) */
-    --bg-main: 11 16 32;          /* #0B1020 */
-    --bg-surface: 17 26 46;       /* #111A2E */
-    --bg-elevated: 22 34 56;      /* #162238 */
-    --color-primary: 99 102 241;  /* #6366F1 */
+    --bg-main: 11 16 32;           /* #0B1020 */
+    --bg-surface: 17 26 46;        /* #111A2E */
+    --bg-elevated: 22 34 56;       /* #162238 */
+    --color-primary: 99 102 241;   /* #6366F1 */
     --color-primary-hover: 79 70 229;
     --color-primary-subtle: rgba(99, 102, 241, 0.12);
     --color-primary-contrast: #FFFFFF;
-    --color-secondary: 34 211 238; /* #22D3EE */
+    --color-secondary: 34 211 238;  /* #22D3EE */
     --color-secondary-hover: 6 182 212;
     --color-secondary-subtle: rgba(34, 211, 238, 0.12);
-    --text-primary: 248 250 252;  /* #F8FAFC */
-    --text-secondary: 148 163 184;/* #94A3B8 */
-    --border-color: 38 52 73;     /* #263449 */
+    --text-primary: 248 250 252;   /* #F8FAFC */
+    --text-secondary: 148 163 184; /* #94A3B8 */
+    --border-color: 38 52 73;      /* #263449 */
     --border-subtle: rgba(255, 255, 255, 0.08);
-    --color-success: 52 211 153;  /* #34D399 */
+    --color-success: 52 211 153;   /* #34D399 */
   }
 
   [data-theme="light"] {
     color-scheme: light;
 
     /* Light Theme Palette (Specification in space-separated RGB) */
-    --bg-main: 248 250 252;       /* #F8FAFC */
-    --bg-surface: 255 255 255;    /* #FFFFFF */
-    --bg-elevated: 241 245 249;   /* #F1F5F9 */
-    --color-primary: 79 70 229;   /* #4F46E5 */
+    --bg-main: 248 250 252;        /* #F8FAFC */
+    --bg-surface: 255 255 255;     /* #FFFFFF */
+    --bg-elevated: 241 245 249;    /* #F1F5F9 */
+    --color-primary: 79 70 229;    /* #4F46E5 */
     --color-primary-hover: 67 56 202;
     --color-primary-subtle: rgba(79, 70, 229, 0.08);
     --color-primary-contrast: #FFFFFF;
-    --color-secondary: 14 116 144; /* #0E7490 (High-contrast WCAG AA 5.3:1) */
+    --color-secondary: 14 116 144;  /* #0E7490 (High-contrast WCAG AA 5.3:1) */
     --color-secondary-hover: 21 94 117;
     --color-secondary-subtle: rgba(14, 116, 144, 0.08);
-    --text-primary: 15 23 42;     /* #0F172A */
-    --text-secondary: 71 85 105;  /* #475569 */
-    --border-color: 226 232 240;  /* #E2E8F0 */
+    --text-primary: 15 23 42;      /* #0F172A */
+    --text-secondary: 71 85 105;   /* #475569 */
+    --border-color: 226 232 240;   /* #E2E8F0 */
     --border-subtle: rgba(15, 23, 42, 0.06);
-    --color-success: 4 120 87;    /* #047857 (High-contrast WCAG AA 5.5:1) */
+    --color-success: 4 120 87;     /* #047857 (High-contrast WCAG AA 5.5:1) */
   }
 
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5.5rem;
     scrollbar-color: rgb(var(--border-color)) transparent;
+  }
+
+  /* Custom styled scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--bg-main));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--border-color));
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--color-primary));
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -75,6 +98,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Prevent background scrolling when mobile menu drawer is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+
   /* Accessible focus indicators meeting WCAG 2.2 AA */
   :focus-visible {
     outline: 2px solid rgb(var(--color-primary));
@@ -93,19 +121,23 @@
 
 @layer components {
   /* Reusable button styles using design tokens */
+  .btn,
   .btn-base {
     @apply inline-flex items-center justify-center gap-2 font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 whitespace-nowrap active:translate-y-px;
   }
 
-  .btn-brand-primary {
+  .btn-brand-primary,
+  .btn-primary {
     @apply btn-base bg-primary text-white shadow-sm hover:bg-primary-hover hover:shadow-glow-primary hover:-translate-y-0.5;
   }
 
-  .btn-brand-secondary {
+  .btn-brand-secondary,
+  .btn-secondary {
     @apply btn-base bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:-translate-y-0.5;
   }
 
-  .btn-brand-outline {
+  .btn-brand-outline,
+  .btn-outline {
     @apply btn-base bg-transparent border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle;
   }
 
@@ -114,9 +146,42 @@
     @apply inline-block text-xs font-bold tracking-widest uppercase text-primary bg-primary-subtle px-3 py-1 rounded-full border border-stroke mb-2;
   }
 
-  /* Modern cards */
+  /* Modern card surfaces */
   .card-surface {
     @apply bg-surface border border-stroke rounded-xl transition-all duration-200;
+  }
+
+  .project-card {
+    @apply card-surface overflow-hidden flex flex-col hover:border-primary hover:shadow-card-hover hover:-translate-y-1.5;
+  }
+
+  .skills-category {
+    @apply card-surface p-6 hover:border-primary hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .contact-card {
+    @apply card-surface p-8 text-center flex flex-col items-center hover:border-primary hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .timeline-block {
+    @apply card-surface p-6 hover:border-primary hover:shadow-card-hover;
+  }
+
+  /* Mobile menu button hamburger animation */
+  .mobile-menu-btn {
+    @apply flex flex-col justify-center items-center gap-1 p-2 min-h-[40px] min-w-[40px] rounded-lg border border-stroke bg-surface/40 hover:bg-surface text-content-primary transition-all;
+  }
+
+  .mobile-menu-btn[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .mobile-menu-btn[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   /* Mobile drawer transitions */
