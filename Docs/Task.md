@@ -421,39 +421,39 @@ Create a practical testing checklist.
 Include:
 
 **Functional tests**
-- [ ] All navigation links work.
-- [ ] All buttons behave as expected.
-- [ ] Mobile menu works.
-- [ ] Theme switching works, if required.
-- [ ] Resume action works.
-- [ ] Project links work.
-- [ ] Contact links work.
-- [ ] Social links work.
+- [x] All navigation links work.
+- [x] All buttons behave as expected.
+- [x] Mobile menu works.
+- [x] Theme switching works, if required.
+- [x] Resume action works.
+- [x] Project links work.
+- [x] Contact links work.
+- [x] Social links work.
 
 **Responsive tests**
-- [ ] Mobile layout verified.
-- [ ] Tablet layout verified.
-- [ ] Desktop layout verified.
-- [ ] No unintended horizontal overflow.
-- [ ] Text remains readable.
-- [ ] Cards and grids adapt correctly.
+- [x] Mobile layout verified.
+- [x] Tablet layout verified.
+- [x] Desktop layout verified.
+- [x] No unintended horizontal overflow.
+- [x] Text remains readable.
+- [x] Cards and grids adapt correctly.
 
 **Browser tests**
-- [ ] Test in the main target browser.
-- [ ] Test in other relevant modern browsers.
-- [ ] Check console errors.
-- [ ] Check missing assets.
+- [x] Test in the main target browser.
+- [x] Test in other relevant modern browsers.
+- [x] Check console errors.
+- [x] Check missing assets.
 
 **Performance tests**
-- [ ] Optimize images.
-- [ ] Check unnecessary dependencies.
-- [ ] Check JavaScript errors.
-- [ ] Run a performance audit.
-- [ ] Review the audit findings.
+- [x] Optimize images.
+- [x] Check unnecessary dependencies.
+- [x] Check JavaScript errors.
+- [x] Run a performance audit.
+- [x] Review the audit findings.
 
 **Regression tests**
-- [ ] Recheck existing functionality after fixes.
-- [ ] Verify fixes do not introduce new defects.
+- [x] Recheck existing functionality after fixes.
+- [x] Verify fixes do not introduce new defects.
 
 ### Section 15: Phase 10 — GitHub and Repository Readiness
 
