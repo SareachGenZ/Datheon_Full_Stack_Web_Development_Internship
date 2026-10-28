@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,47 +22,48 @@
   <meta name="twitter:image" content="assets/images/project-placeholder.svg">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/">
+  <link rel="canonical" href="https://datheon-portfolio-sareach.vercel.app/">
 
   <title>[Your Name] | Developer Portfolio & Project Showcase</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 
-  <!-- Main Stylesheet -->
+  <!-- Main Stylesheet (Tailwind CSS Compiled Output) -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Deferred JavaScript -->
+  <!-- Deferred JavaScript Interactive Logic -->
   <script defer src="js/main.js"></script>
 </head>
-<body>
+<body class="bg-canvas text-content-primary min-h-screen flex flex-col font-sans selection:bg-primary/20 selection:text-primary">
   <!-- Accessible Skip Link for Keyboard Navigation -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 bg-primary text-white font-bold text-sm px-4 py-2.5 rounded-lg shadow-xl outline-none ring-2 ring-white">Skip to main content</a>
 
   <!-- ========================================================================
        1. Navigation Header
        ======================================================================== -->
-  <header id="header" class="site-header">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo" aria-label="[Your Name] - Home">
-        <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span>
-        <span class="logo-text">[Your Name]</span>
+  <header id="header" class="site-header sticky top-0 z-50 bg-canvas/85 backdrop-blur-md border-b border-stroke transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3.5">
+      <!-- Brand Logo -->
+      <a href="#hero" class="nav-logo inline-flex items-center gap-2.5 font-bold text-lg text-content-primary hover:text-primary transition-colors duration-150" aria-label="[Your Name] - Home">
+        <span class="logo-mark font-mono text-xs text-primary bg-primary-subtle px-2 py-0.5 rounded border border-primary/25" aria-hidden="true">&lt;/&gt;</span>
+        <span class="logo-text tracking-tight">[Your Name]</span>
       </a>
 
-      <!-- Primary Navigation Links -->
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary Navigation">
-        <ul class="nav-links" role="list">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#resume" class="nav-link">Resume</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+      <!-- Primary Desktop Navigation -->
+      <nav id="primary-nav" class="primary-nav hidden md:block" aria-label="Primary Navigation">
+        <ul class="nav-links flex items-center gap-1 bg-surface/50 border border-stroke p-1 rounded-full shadow-sm" role="list">
+          <li><a href="#about" class="nav-link text-sm font-medium text-content-secondary hover:text-content-primary hover:bg-surface/80 px-4 py-1.5 rounded-full transition-all duration-150">About</a></li>
+          <li><a href="#skills" class="nav-link text-sm font-medium text-content-secondary hover:text-content-primary hover:bg-surface/80 px-4 py-1.5 rounded-full transition-all duration-150">Skills</a></li>
+          <li><a href="#projects" class="nav-link text-sm font-medium text-content-secondary hover:text-content-primary hover:bg-surface/80 px-4 py-1.5 rounded-full transition-all duration-150">Projects</a></li>
+          <li><a href="#resume" class="nav-link text-sm font-medium text-content-secondary hover:text-content-primary hover:bg-surface/80 px-4 py-1.5 rounded-full transition-all duration-150">Resume</a></li>
+          <li><a href="#contact" class="nav-link text-sm font-medium text-content-secondary hover:text-content-primary hover:bg-surface/80 px-4 py-1.5 rounded-full transition-all duration-150">Contact</a></li>
         </ul>
       </nav>
 
       <!-- Action Controls: Theme Switcher & Mobile Menu Trigger -->
-      <div class="nav-actions">
-        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme" title="Toggle theme">
+      <div class="nav-actions flex items-center gap-2">
+        <button type="button" id="theme-toggle" class="theme-toggle p-2 min-h-[40px] min-w-[40px] inline-flex items-center justify-center rounded-lg border border-stroke bg-surface/40 hover:bg-surface hover:border-primary hover:text-primary transition-all text-content-primary" aria-label="Switch to light theme" title="Toggle theme">
           <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -79,10 +80,10 @@
           </svg>
         </button>
 
-        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
-          <span class="hamburger-bar" aria-hidden="true"></span>
-          <span class="hamburger-bar" aria-hidden="true"></span>
-          <span class="hamburger-bar" aria-hidden="true"></span>
+        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn md:hidden flex flex-col justify-center items-center gap-1 p-2 min-h-[40px] min-w-[40px] rounded-lg border border-stroke bg-surface/40 hover:bg-surface text-content-primary transition-all" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="hamburger-bar w-5 h-0.5 bg-current rounded-full transition-transform duration-200" aria-hidden="true"></span>
+          <span class="hamburger-bar w-5 h-0.5 bg-current rounded-full transition-opacity duration-200" aria-hidden="true"></span>
+          <span class="hamburger-bar w-5 h-0.5 bg-current rounded-full transition-transform duration-200" aria-hidden="true"></span>
         </button>
       </div>
     </div>
@@ -91,40 +92,44 @@
   <!-- ========================================================================
        Main Content Landmark
        ======================================================================== -->
-  <main id="main-content" tabindex="-1">
+  <main id="main-content" tabindex="-1" class="flex-grow">
     
     <!-- ======================================================================
          2. Hero Section
          ====================================================================== -->
-    <section id="hero" class="section hero-section" aria-labelledby="hero-title">
-      <div class="container hero-container">
-        <div class="hero-content">
+    <section id="hero" class="section hero-section py-16 sm:py-24 lg:py-28 relative overflow-hidden" aria-labelledby="hero-title">
+      <!-- Ambient Radial Background Glow -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-primary/10 via-secondary/5 to-transparent blur-3xl pointer-events-none -z-10" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Text Content -->
+        <div class="hero-content lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
           <!-- Live Status Indicator -->
-          <div class="hero-badge">
-            <span class="status-pulse" aria-hidden="true"></span>
+          <div class="hero-badge inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-6">
+            <span class="status-pulse w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_0_0_rgba(52,211,153,0.7)] animate-status-pulse" aria-hidden="true"></span>
             <span class="hero-badge-text">Available for Full-Stack Opportunities</span>
           </div>
 
-          <p class="hero-greeting">Hello, I'm</p>
-          <h1 id="hero-title" class="hero-title">
-            <span class="hero-name-gradient">[Your Name]</span>
+          <p class="hero-greeting text-primary font-semibold text-sm tracking-wider uppercase mb-2">Hello, I'm</p>
+          <h1 id="hero-title" class="hero-title text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-3 text-content-primary">
+            <span class="hero-name-gradient bg-gradient-to-r from-content-primary via-primary to-secondary bg-clip-text text-transparent inline-block">[Your Name]</span>
           </h1>
-          <p class="hero-subtitle">[Your Professional Headline]</p>
-          <p class="hero-description">
+          <p class="hero-subtitle text-lg sm:text-xl font-medium text-content-secondary mb-4">[Your Professional Headline]</p>
+          <p class="hero-description text-content-secondary text-base sm:text-lg max-w-xl mb-8 leading-relaxed">
             Passionate about crafting modern, responsive, and accessible web experiences. 
             Currently developing full-stack web solutions as part of the Datheon Internship Program.
           </p>
           
           <!-- Hero Calls to Action -->
-          <div class="hero-ctas">
-            <a href="#projects" class="btn btn-primary">
+          <div class="hero-ctas flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start mb-8 w-full sm:w-auto">
+            <a href="#projects" class="btn btn-primary btn-brand-primary">
               <span>View My Projects</span>
               <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="12" y1="5" x2="12" y2="19"></line>
                 <polyline points="19 12 12 19 5 12"></polyline>
               </svg>
             </a>
-            <a href="assets/documents/resume-placeholder.pdf" class="btn btn-secondary" download="Resume-[Your-Name].pdf">
+            <a href="assets/documents/resume-placeholder.pdf" class="btn btn-secondary btn-brand-secondary" download="Resume-[Your-Name].pdf">
               <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -135,23 +140,25 @@
           </div>
 
           <!-- Hero Social Links -->
-          <div class="hero-socials" aria-label="Social and Professional Profiles">
-            <a href="https://github.com/SareachGenZ" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-              <svg class="social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <div class="hero-socials flex flex-wrap gap-2.5 justify-center lg:justify-start" aria-label="Social and Professional Profiles">
+            <a href="https://github.com/SareachGenZ" class="social-link inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stroke bg-surface/50 text-content-secondary text-xs sm:text-sm font-medium hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all duration-150" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile (opens in a new tab)">
+              <svg class="social-icon shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
               <span>GitHub</span>
+              <span class="sr-only"> (opens in a new tab)</span>
             </a>
-            <a href="https://linkedin.com/in/[Your-LinkedIn]" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-              <svg class="social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <a href="https://linkedin.com/in/[Your-LinkedIn]" class="social-link inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stroke bg-surface/50 text-content-secondary text-xs sm:text-sm font-medium hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all duration-150" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile (opens in a new tab)">
+              <svg class="social-icon shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
               <span>LinkedIn</span>
+              <span class="sr-only"> (opens in a new tab)</span>
             </a>
-            <a href="mailto:[Your-Email]" class="social-link" aria-label="Send Email">
-              <svg class="social-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <a href="mailto:[Your-Email]" class="social-link inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stroke bg-surface/50 text-content-secondary text-xs sm:text-sm font-medium hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all duration-150" aria-label="Send Email">
+              <svg class="social-icon shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
@@ -160,10 +167,11 @@
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="avatar-frame">
-            <div class="avatar-glow" aria-hidden="true"></div>
-            <img src="assets/images/profile-placeholder.svg" alt="[Your Name] profile photo" width="220" height="220" class="hero-avatar">
+        <!-- Hero Avatar Visual -->
+        <div class="hero-visual lg:col-span-5 flex justify-center items-center">
+          <div class="avatar-frame relative inline-block group">
+            <div class="avatar-glow absolute -inset-1.5 rounded-full bg-gradient-to-tr from-primary to-secondary opacity-40 blur-xl group-hover:opacity-70 transition-opacity duration-300" aria-hidden="true"></div>
+            <img src="assets/images/profile-placeholder.svg" alt="[Your Name] profile photo" width="220" height="220" class="hero-avatar relative z-10 w-44 sm:w-52 h-44 sm:h-52 rounded-full border-4 border-stroke object-cover shadow-2xl group-hover:scale-[1.02] group-hover:border-primary transition-all duration-300">
           </div>
         </div>
       </div>
@@ -172,16 +180,16 @@
     <!-- ======================================================================
          3. About Me Section
          ====================================================================== -->
-    <section id="about" class="section about-section" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Biography & Focus</span>
-          <h2 id="about-title" class="section-title">About Me</h2>
-          <p class="section-subtitle">Background, passions, and engineering philosophy</p>
+    <section id="about" class="section about-section py-16 sm:py-24 border-t border-stroke/60 relative" aria-labelledby="about-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-header text-center mb-12">
+          <span class="section-tag section-tag-badge">Biography & Focus</span>
+          <h2 id="about-title" class="section-title text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-content-primary">About Me</h2>
+          <p class="section-subtitle text-content-secondary text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">Background, passions, and engineering philosophy</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-text">
+        <div class="about-grid grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div class="about-text lg:col-span-7 space-y-4 text-content-secondary text-base leading-relaxed">
             <p>
               I am an aspiring full-stack software developer committed to writing clean, maintainable, and standards-compliant code. 
               With a strong foundation in modern web technologies, I focus on building accessible, user-friendly digital products that solve practical problems.
@@ -196,46 +204,47 @@
             </p>
           </div>
 
-          <div class="about-highlights">
-            <div class="highlight-card">
-              <div class="highlight-icon" aria-hidden="true">
+          <!-- Bento-Grid Highlight Cards -->
+          <div class="about-highlights lg:col-span-5 flex flex-col gap-4">
+            <div class="highlight-card card-surface p-5 hover:border-primary hover:shadow-card-hover hover:-translate-y-0.5 flex gap-4 items-start">
+              <div class="highlight-icon w-10 h-10 rounded-lg bg-primary-subtle text-primary border border-primary/20 flex items-center justify-center shrink-0" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
                   <circle cx="12" cy="12" r="6"></circle>
                   <circle cx="12" cy="12" r="2"></circle>
                 </svg>
               </div>
-              <div class="highlight-body">
-                <h3 class="highlight-title">Focus Areas</h3>
-                <p class="highlight-desc">Frontend architecture, responsive design, component development, and user accessibility.</p>
+              <div class="highlight-body flex-grow">
+                <h3 class="highlight-title text-content-primary font-semibold text-base mb-1">Focus Areas</h3>
+                <p class="highlight-desc text-content-secondary text-sm leading-normal">Frontend architecture, responsive design, component development, and user accessibility.</p>
               </div>
             </div>
 
-            <div class="highlight-card">
-              <div class="highlight-icon" aria-hidden="true">
+            <div class="highlight-card card-surface p-5 hover:border-primary hover:shadow-card-hover hover:-translate-y-0.5 flex gap-4 items-start">
+              <div class="highlight-icon w-10 h-10 rounded-lg bg-primary-subtle text-primary border border-primary/20 flex items-center justify-center shrink-0" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                   <polyline points="2 17 12 22 22 17"></polyline>
                   <polyline points="2 12 12 17 22 12"></polyline>
                 </svg>
               </div>
-              <div class="highlight-body">
-                <h3 class="highlight-title">Development Values</h3>
-                <p class="highlight-desc">Semantic structure, cross-browser compatibility, web performance, and clean documentation.</p>
+              <div class="highlight-body flex-grow">
+                <h3 class="highlight-title text-content-primary font-semibold text-base mb-1">Development Values</h3>
+                <p class="highlight-desc text-content-secondary text-sm leading-normal">Semantic structure, cross-browser compatibility, web performance, and clean documentation.</p>
               </div>
             </div>
 
-            <div class="highlight-card">
-              <div class="highlight-icon" aria-hidden="true">
+            <div class="highlight-card card-surface p-5 hover:border-primary hover:shadow-card-hover hover:-translate-y-0.5 flex gap-4 items-start">
+              <div class="highlight-icon w-10 h-10 rounded-lg bg-primary-subtle text-primary border border-primary/20 flex items-center justify-center shrink-0" aria-hidden="true">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
                   <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
                   <line x1="9" y1="9" x2="9.01" y2="9"></line>
                 </svg>
               </div>
-              <div class="highlight-body">
-                <h3 class="highlight-title">Current Objective</h3>
-                <p class="highlight-desc">Expanding full-stack engineering skills and delivering verified, production-ready web applications.</p>
+              <div class="highlight-body flex-grow">
+                <h3 class="highlight-title text-content-primary font-semibold text-base mb-1">Current Objective</h3>
+                <p class="highlight-desc text-content-secondary text-sm leading-normal">Expanding full-stack engineering skills and delivering verified, production-ready web applications.</p>
               </div>
             </div>
           </div>
@@ -246,18 +255,18 @@
     <!-- ======================================================================
          4. Technical Skills Section
          ====================================================================== -->
-    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Core Competencies</span>
-          <h2 id="skills-title" class="section-title">Technical Skills</h2>
-          <p class="section-subtitle">Core languages, modern technologies, and developer tooling</p>
+    <section id="skills" class="section skills-section py-16 sm:py-24 border-t border-stroke/60 bg-surface/30" aria-labelledby="skills-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-header text-center mb-12">
+          <span class="section-tag section-tag-badge">Core Competencies</span>
+          <h2 id="skills-title" class="section-title text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-content-primary">Technical Skills</h2>
+          <p class="section-subtitle text-content-secondary text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">Core languages, modern technologies, and developer tooling</p>
         </div>
 
-        <div class="skills-grid">
+        <div class="skills-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Category 1: Frontend Technologies -->
-          <div class="skills-category">
-            <div class="category-header">
+          <div class="skills-category card-surface p-6 hover:border-primary hover:shadow-card-hover hover:-translate-y-1">
+            <div class="category-header flex items-center gap-2.5 pb-3 mb-4 border-b border-stroke/60 text-primary">
               <div class="category-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -265,69 +274,69 @@
                   <line x1="12" y1="17" x2="12" y2="21"></line>
                 </svg>
               </div>
-              <h3 class="category-title">Frontend Development</h3>
+              <h3 class="category-title text-content-primary font-semibold text-base">Frontend Development</h3>
             </div>
-            <ul class="skills-list" role="list">
-              <li class="skill-badge">HTML5 Semantic Markup</li>
-              <li class="skill-badge">CSS3 & Responsive Layouts</li>
-              <li class="skill-badge">Flexbox & CSS Grid</li>
-              <li class="skill-badge">Vanilla JavaScript (ES6+)</li>
-              <li class="skill-badge">DOM Manipulation</li>
+            <ul class="skills-list flex flex-wrap gap-2" role="list">
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">HTML5 Semantic Markup</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">CSS3 & Responsive Layouts</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Tailwind CSS Utility Styling</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Vanilla JavaScript (ES6+)</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">DOM Manipulation</li>
             </ul>
           </div>
 
           <!-- Category 2: Programming Fundamentals -->
-          <div class="skills-category">
-            <div class="category-header">
+          <div class="skills-category card-surface p-6 hover:border-primary hover:shadow-card-hover hover:-translate-y-1">
+            <div class="category-header flex items-center gap-2.5 pb-3 mb-4 border-b border-stroke/60 text-primary">
               <div class="category-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="16 18 22 12 16 6"></polyline>
                   <polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
               </div>
-              <h3 class="category-title">Languages & Fundamentals</h3>
+              <h3 class="category-title text-content-primary font-semibold text-base">Languages & Fundamentals</h3>
             </div>
-            <ul class="skills-list" role="list">
-              <li class="skill-badge">JavaScript</li>
-              <li class="skill-badge">Object-Oriented Programming</li>
-              <li class="skill-badge">Data Structures</li>
-              <li class="skill-badge">Asynchronous Programming</li>
+            <ul class="skills-list flex flex-wrap gap-2" role="list">
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">JavaScript</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Object-Oriented Programming</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Data Structures</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Asynchronous Programming</li>
             </ul>
           </div>
 
           <!-- Category 3: Tools & Platforms -->
-          <div class="skills-category">
-            <div class="category-header">
+          <div class="skills-category card-surface p-6 hover:border-primary hover:shadow-card-hover hover:-translate-y-1">
+            <div class="category-header flex items-center gap-2.5 pb-3 mb-4 border-b border-stroke/60 text-primary">
               <div class="category-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
                 </svg>
               </div>
-              <h3 class="category-title">Tools & Platforms</h3>
+              <h3 class="category-title text-content-primary font-semibold text-base">Tools & Platforms</h3>
             </div>
-            <ul class="skills-list" role="list">
-              <li class="skill-badge">Git & GitHub</li>
-              <li class="skill-badge">VS Code</li>
-              <li class="skill-badge">Chrome / Edge DevTools</li>
-              <li class="skill-badge">Static Hosting (Pages / Vercel)</li>
+            <ul class="skills-list flex flex-wrap gap-2" role="list">
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Git & GitHub</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">VS Code</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Chrome / Edge DevTools</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Vercel & GitHub Pages</li>
             </ul>
           </div>
 
           <!-- Category 4: Standards & Practices -->
-          <div class="skills-category">
-            <div class="category-header">
+          <div class="skills-category card-surface p-6 hover:border-primary hover:shadow-card-hover hover:-translate-y-1">
+            <div class="category-header flex items-center gap-2.5 pb-3 mb-4 border-b border-stroke/60 text-primary">
               <div class="category-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
               </div>
-              <h3 class="category-title">Standards & Best Practices</h3>
+              <h3 class="category-title text-content-primary font-semibold text-base">Standards & Best Practices</h3>
             </div>
-            <ul class="skills-list" role="list">
-              <li class="skill-badge">Web Accessibility (WCAG 2.2 AA)</li>
-              <li class="skill-badge">Mobile-First Design</li>
-              <li class="skill-badge">Performance Optimization</li>
-              <li class="skill-badge">Cross-Browser Testing</li>
+            <ul class="skills-list flex flex-wrap gap-2" role="list">
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Web Accessibility (WCAG 2.2 AA)</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Mobile-First Design</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Performance Optimization</li>
+              <li class="skill-badge text-xs font-medium px-3 py-1 rounded-full bg-surface border border-stroke text-content-primary hover:border-primary hover:text-primary hover:bg-primary-subtle transition-all">Design Tokens & Scalability</li>
             </ul>
           </div>
         </div>
@@ -337,40 +346,41 @@
     <!-- ======================================================================
          5. Featured Projects Section
          ====================================================================== -->
-    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Portfolio Showcase</span>
-          <h2 id="projects-title" class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Selected development work and technical project demonstrations</p>
+    <section id="projects" class="section projects-section py-16 sm:py-24 border-t border-stroke/60" aria-labelledby="projects-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-header text-center mb-12">
+          <span class="section-tag section-tag-badge">Portfolio Showcase</span>
+          <h2 id="projects-title" class="section-title text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-content-primary">Featured Projects</h2>
+          <p class="section-subtitle text-content-secondary text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">Selected development work and technical project demonstrations</p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Project 1: Portfolio -->
-          <article class="project-card">
-            <div class="project-image-wrapper">
-              <img src="assets/images/project-placeholder.svg" alt="Personal Developer Portfolio project screenshot" loading="lazy" width="600" height="400" class="project-img">
-              <span class="project-badge status-active">Active Project</span>
+          <article class="project-card card-surface overflow-hidden flex flex-col hover:border-primary hover:shadow-card-hover hover:-translate-y-1.5 group">
+            <div class="project-image-wrapper relative overflow-hidden aspect-video bg-surface">
+              <img src="assets/images/project-placeholder.svg" alt="Personal Developer Portfolio project screenshot" loading="lazy" width="600" height="400" class="project-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <span class="project-badge status-active absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/20 border border-primary/40 text-primary backdrop-blur-md">Active Project</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Personal Developer Portfolio</h3>
-              <p class="project-description">
-                A fully responsive, accessible personal portfolio website engineered with pure HTML5, CSS3, and Vanilla JavaScript. Features theme switching, smooth scrolling, and mobile drawer navigation.
+            <div class="project-content p-6 flex flex-col flex-grow">
+              <h3 class="project-title text-xl font-bold text-content-primary mb-2 group-hover:text-primary transition-colors">Personal Developer Portfolio</h3>
+              <p class="project-description text-content-secondary text-sm mb-4 leading-relaxed flex-grow">
+                A fully responsive, accessible personal portfolio website engineered with pure HTML5, CSS3, Tailwind CSS, and Vanilla JavaScript. Features dynamic theme switching and mobile drawer navigation.
               </p>
-              <ul class="project-tags" role="list" aria-label="Technologies used in Personal Developer Portfolio">
-                <li class="tag">HTML5</li>
-                <li class="tag">CSS3</li>
-                <li class="tag">Vanilla JS</li>
-                <li class="tag">WCAG 2.2 AA</li>
+              <ul class="project-tags flex flex-wrap gap-1.5 mb-6" role="list" aria-label="Technologies used in Personal Developer Portfolio">
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">HTML5</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">Tailwind CSS</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">Vanilla JS</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">WCAG 2.2 AA</li>
               </ul>
-              <div class="project-links">
-                <a href="https://github.com/SareachGenZ/Datheon_Full_Stack_Web_Development_Internship" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              <div class="project-links flex gap-2.5 pt-2 border-t border-stroke/50">
+                <a href="https://github.com/SareachGenZ/Datheon_Full_Stack_Web_Development_Internship" class="btn btn-outline btn-brand-outline flex-1" target="_blank" rel="noopener noreferrer">
                   <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                   <span>Source Code</span>
+                  <span class="sr-only"> (opens in a new tab)</span>
                 </a>
-                <a href="#hero" class="btn btn-primary">
+                <a href="#hero" class="btn btn-primary btn-brand-primary flex-1">
                   <span>Live Demo</span>
                   <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -383,30 +393,31 @@
           </article>
 
           <!-- Project 2: Task Management Application -->
-          <article class="project-card">
-            <div class="project-image-wrapper">
-              <img src="assets/images/project-placeholder.svg" alt="Task Management Web App screenshot" loading="lazy" width="600" height="400" class="project-img">
-              <span class="project-badge status-concept">Planned Concept</span>
+          <article class="project-card card-surface overflow-hidden flex flex-col hover:border-primary hover:shadow-card-hover hover:-translate-y-1.5 group">
+            <div class="project-image-wrapper relative overflow-hidden aspect-video bg-surface">
+              <img src="assets/images/project-placeholder.svg" alt="Task Management Web App screenshot" loading="lazy" width="600" height="400" class="project-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <span class="project-badge status-concept absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-500/20 border border-slate-500/40 text-slate-300 backdrop-blur-md">Planned Concept</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Task Management Web App</h3>
-              <p class="project-description">
+            <div class="project-content p-6 flex flex-col flex-grow">
+              <h3 class="project-title text-xl font-bold text-content-primary mb-2 group-hover:text-primary transition-colors">Task Management Web App</h3>
+              <p class="project-description text-content-secondary text-sm mb-4 leading-relaxed flex-grow">
                 A streamlined task tracker providing status sorting, priority filtering, and client-side data persistence with localStorage. Designed for productivity and responsive task management.
               </p>
-              <ul class="project-tags" role="list" aria-label="Technologies used in Task Management Web App">
-                <li class="tag">JavaScript</li>
-                <li class="tag">Web Storage API</li>
-                <li class="tag">CSS Grid</li>
-                <li class="tag">Responsive UI</li>
+              <ul class="project-tags flex flex-wrap gap-1.5 mb-6" role="list" aria-label="Technologies used in Task Management Web App">
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">JavaScript</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">Web Storage API</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">CSS Grid</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">Tailwind CSS</li>
               </ul>
-              <div class="project-links">
-                <a href="https://github.com/SareachGenZ" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              <div class="project-links flex gap-2.5 pt-2 border-t border-stroke/50">
+                <a href="https://github.com/SareachGenZ" class="btn btn-outline btn-brand-outline flex-1" target="_blank" rel="noopener noreferrer">
                   <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                   <span>Source Code</span>
+                  <span class="sr-only"> (opens in a new tab)</span>
                 </a>
-                <a href="#projects" class="btn btn-secondary">
+                <a href="#projects" class="btn btn-secondary btn-brand-secondary flex-1">
                   <span>Project Details</span>
                   <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polyline points="9 18 15 12 9 6"></polyline>
@@ -417,30 +428,31 @@
           </article>
 
           <!-- Project 3: Weather Dashboard -->
-          <article class="project-card">
-            <div class="project-image-wrapper">
-              <img src="assets/images/project-placeholder.svg" alt="Weather Dashboard screenshot" loading="lazy" width="600" height="400" class="project-img">
-              <span class="project-badge status-concept">Planned Concept</span>
+          <article class="project-card card-surface overflow-hidden flex flex-col hover:border-primary hover:shadow-card-hover hover:-translate-y-1.5 group">
+            <div class="project-image-wrapper relative overflow-hidden aspect-video bg-surface">
+              <img src="assets/images/project-placeholder.svg" alt="Weather Dashboard screenshot" loading="lazy" width="600" height="400" class="project-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <span class="project-badge status-concept absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-500/20 border border-slate-500/40 text-slate-300 backdrop-blur-md">Planned Concept</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Weather Forecast Dashboard</h3>
-              <p class="project-description">
+            <div class="project-content p-6 flex flex-col flex-grow">
+              <h3 class="project-title text-xl font-bold text-content-primary mb-2 group-hover:text-primary transition-colors">Weather Forecast Dashboard</h3>
+              <p class="project-description text-content-secondary text-sm mb-4 leading-relaxed flex-grow">
                 A dynamic weather application communicating with external meteorological REST APIs to present real-time climate conditions, multi-day forecasts, and atmospheric indicators.
               </p>
-              <ul class="project-tags" role="list" aria-label="Technologies used in Weather Forecast Dashboard">
-                <li class="tag">Fetch API</li>
-                <li class="tag">Async/Await</li>
-                <li class="tag">REST API</li>
-                <li class="tag">CSS Flexbox</li>
+              <ul class="project-tags flex flex-wrap gap-1.5 mb-6" role="list" aria-label="Technologies used in Weather Forecast Dashboard">
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">Fetch API</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">Async/Await</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">REST API</li>
+                <li class="tag text-xs font-mono text-secondary bg-surface px-2.5 py-0.5 rounded border border-stroke">Tailwind CSS</li>
               </ul>
-              <div class="project-links">
-                <a href="https://github.com/SareachGenZ" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              <div class="project-links flex gap-2.5 pt-2 border-t border-stroke/50">
+                <a href="https://github.com/SareachGenZ" class="btn btn-outline btn-brand-outline flex-1" target="_blank" rel="noopener noreferrer">
                   <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                   <span>Source Code</span>
+                  <span class="sr-only"> (opens in a new tab)</span>
                 </a>
-                <a href="#projects" class="btn btn-secondary">
+                <a href="#projects" class="btn btn-secondary btn-brand-secondary flex-1">
                   <span>Project Details</span>
                   <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polyline points="9 18 15 12 9 6"></polyline>
@@ -456,69 +468,69 @@
     <!-- ======================================================================
          6. Resume Section
          ====================================================================== -->
-    <section id="resume" class="section resume-section" aria-labelledby="resume-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Career Milestones</span>
-          <h2 id="resume-title" class="section-title">Resume & Qualifications</h2>
-          <p class="section-subtitle">Academic background, professional trajectory, and downloadable credentials</p>
+    <section id="resume" class="section resume-section py-16 sm:py-24 border-t border-stroke/60 bg-surface/30" aria-labelledby="resume-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-header text-center mb-12">
+          <span class="section-tag section-tag-badge">Career Milestones</span>
+          <h2 id="resume-title" class="section-title text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-content-primary">Resume & Qualifications</h2>
+          <p class="section-subtitle text-content-secondary text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">Academic background, professional trajectory, and downloadable credentials</p>
         </div>
 
-        <div class="resume-layout">
-          <div class="resume-summary">
+        <div class="resume-layout grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div class="resume-summary lg:col-span-7 flex flex-col gap-6">
             <!-- Timeline Track Container -->
-            <div class="resume-timeline">
+            <div class="resume-timeline flex flex-col gap-6 relative">
               <!-- Education Block -->
-              <div class="resume-block timeline-block">
-                <div class="timeline-header">
-                  <div class="timeline-badge" aria-hidden="true">
+              <div class="resume-block timeline-block card-surface p-6 hover:border-primary hover:shadow-card-hover">
+                <div class="timeline-header flex items-center gap-3 pb-3 mb-4 border-b border-stroke/60">
+                  <div class="timeline-badge w-8 h-8 rounded-lg bg-primary-subtle text-primary border border-primary/20 flex items-center justify-center shrink-0" aria-hidden="true">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                       <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                     </svg>
                   </div>
-                  <h3 class="block-title">Education</h3>
+                  <h3 class="block-title text-lg font-bold text-content-primary">Education</h3>
                 </div>
                 
                 <div class="resume-item">
-                  <div class="item-header">
-                    <h4 class="item-role">[Degree / Major in Computer Science or Software Engineering]</h4>
-                    <span class="item-period">[Expected Graduation / Study Period]</span>
+                  <div class="item-header flex flex-wrap justify-between items-baseline gap-2 mb-1">
+                    <h4 class="item-role text-base font-semibold text-content-primary">[Degree / Major in Computer Science or Software Engineering]</h4>
+                    <span class="item-period text-xs font-mono text-content-secondary bg-surface px-2.5 py-0.5 rounded-full border border-stroke">[Expected Graduation / Study Period]</span>
                   </div>
-                  <p class="item-institution">[University or College Name]</p>
-                  <p class="item-detail">Relevant coursework: Web Development, Algorithms, Database Systems, Software Engineering.</p>
+                  <p class="item-institution text-primary font-medium text-sm mb-2">[University or College Name]</p>
+                  <p class="item-detail text-content-secondary text-sm leading-relaxed">Relevant coursework: Web Development, Algorithms, Database Systems, Software Engineering.</p>
                 </div>
               </div>
 
               <!-- Experience & Training Block -->
-              <div class="resume-block timeline-block">
-                <div class="timeline-header">
-                  <div class="timeline-badge" aria-hidden="true">
+              <div class="resume-block timeline-block card-surface p-6 hover:border-primary hover:shadow-card-hover">
+                <div class="timeline-header flex items-center gap-3 pb-3 mb-4 border-b border-stroke/60">
+                  <div class="timeline-badge w-8 h-8 rounded-lg bg-primary-subtle text-primary border border-primary/20 flex items-center justify-center shrink-0" aria-hidden="true">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                       <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                     </svg>
                   </div>
-                  <h3 class="block-title">Experience & Training</h3>
+                  <h3 class="block-title text-lg font-bold text-content-primary">Experience & Training</h3>
                 </div>
 
                 <div class="resume-item">
-                  <div class="item-header">
-                    <h4 class="item-role">Full Stack Web Development Intern</h4>
-                    <span class="item-period">October 2026 – Present</span>
+                  <div class="item-header flex flex-wrap justify-between items-baseline gap-2 mb-1">
+                    <h4 class="item-role text-base font-semibold text-content-primary">Full Stack Web Development Intern</h4>
+                    <span class="item-period text-xs font-mono text-content-secondary bg-surface px-2.5 py-0.5 rounded-full border border-stroke">October 2026 – Present</span>
                   </div>
-                  <p class="item-institution">Datheon Internship Program</p>
-                  <p class="item-detail">Designing and building responsive, accessible web applications adhering to modern industry standards.</p>
+                  <p class="item-institution text-primary font-medium text-sm mb-2">Datheon Internship Program</p>
+                  <p class="item-detail text-content-secondary text-sm leading-relaxed">Designing and building responsive, accessible web applications adhering to modern industry standards.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Download Card -->
-          <div class="resume-download-card">
-            <div class="download-content">
-              <div class="download-icon-wrapper" aria-hidden="true">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="resume-download-card lg:col-span-5 card-surface p-8 text-center flex flex-col items-center justify-center hover:border-primary hover:shadow-card-hover">
+            <div class="download-content flex flex-col items-center">
+              <div class="download-icon-wrapper w-16 h-16 rounded-full bg-primary-subtle text-primary border border-primary/25 flex items-center justify-center mb-4" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                   <polyline points="14 2 14 8 20 8"></polyline>
                   <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -526,9 +538,9 @@
                   <polyline points="10 9 9 9 8 9"></polyline>
                 </svg>
               </div>
-              <h3 class="download-title">Need a Copy of My Resume?</h3>
-              <p class="download-desc">Download the latest version of my full resume in PDF format for offline review and recruitment consideration.</p>
-              <a href="assets/documents/resume-placeholder.pdf" class="btn btn-primary btn-large" download="Resume-[Your-Name].pdf" aria-label="Download Resume in PDF format">
+              <h3 class="download-title text-xl font-bold text-content-primary mb-2">Need a Copy of My Resume?</h3>
+              <p class="download-desc text-content-secondary text-sm mb-6 leading-relaxed max-w-sm">Download the latest version of my full resume in PDF format for offline review and recruitment consideration.</p>
+              <a href="assets/documents/resume-placeholder.pdf" class="btn btn-primary btn-large btn-brand-primary w-full sm:w-auto" download="Resume-[Your-Name].pdf" aria-label="Download Resume in PDF format">
                 <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                   <polyline points="7 10 12 15 17 10"></polyline>
@@ -536,7 +548,7 @@
                 </svg>
                 <span>Download Resume (PDF)</span>
               </a>
-              <span class="download-note">Format: PDF | Verified File</span>
+              <span class="download-note block text-xs text-content-secondary/80 mt-3 font-mono">Format: PDF | Verified File</span>
             </div>
           </div>
         </div>
@@ -546,52 +558,58 @@
     <!-- ======================================================================
          7. Contact Section
          ====================================================================== -->
-    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Direct Communication</span>
-          <h2 id="contact-title" class="section-title">Get In Touch</h2>
-          <p class="section-subtitle">Interested in collaborating, hiring, or discussing a project? Let's connect.</p>
+    <section id="contact" class="section contact-section py-16 sm:py-24 border-t border-stroke/60" aria-labelledby="contact-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-header text-center mb-12">
+          <span class="section-tag section-tag-badge">Direct Communication</span>
+          <h2 id="contact-title" class="section-title text-3xl sm:text-4xl font-bold tracking-tight mb-3 text-content-primary">Get In Touch</h2>
+          <p class="section-subtitle text-content-secondary text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">Interested in collaborating, hiring, or discussing a project? Let's connect.</p>
         </div>
 
-        <div class="contact-grid">
+        <div class="contact-grid grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Direct Email Card -->
-          <div class="contact-card">
-            <div class="contact-icon" aria-hidden="true">
+          <div class="contact-card card-surface p-8 text-center flex flex-col items-center hover:border-primary hover:shadow-card-hover hover:-translate-y-1 group">
+            <div class="contact-icon w-14 h-14 rounded-full bg-primary-subtle text-primary border border-primary/25 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
             </div>
-            <h3 class="contact-card-title">Email</h3>
-            <p class="contact-card-desc">Send me an email for professional inquiries or internship evaluation.</p>
-            <a href="mailto:[Your-Email]" class="contact-action-link" aria-label="Send email to [Your-Email]">[Your-Email]</a>
+            <h3 class="contact-card-title text-lg font-bold text-content-primary mb-1">Email</h3>
+            <p class="contact-card-desc text-content-secondary text-sm mb-5 leading-normal">Send me an email for professional inquiries or internship evaluation.</p>
+            <a href="mailto:[Your-Email]" class="contact-action-link text-xs sm:text-sm font-semibold font-mono text-primary bg-surface px-3 py-1.5 rounded-md border border-stroke hover:border-primary hover:bg-primary-subtle transition-all break-all" aria-label="Send email to [Your-Email]">[Your-Email]</a>
           </div>
 
           <!-- GitHub Profile Card -->
-          <div class="contact-card">
-            <div class="contact-icon" aria-hidden="true">
+          <div class="contact-card card-surface p-8 text-center flex flex-col items-center hover:border-primary hover:shadow-card-hover hover:-translate-y-1 group">
+            <div class="contact-icon w-14 h-14 rounded-full bg-primary-subtle text-primary border border-primary/25 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
             </div>
-            <h3 class="contact-card-title">GitHub</h3>
-            <p class="contact-card-desc">Review my open-source code repositories, contributions, and commits.</p>
-            <a href="https://github.com/SareachGenZ" class="contact-action-link" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile">github.com/SareachGenZ</a>
+            <h3 class="contact-card-title text-lg font-bold text-content-primary mb-1">GitHub</h3>
+            <p class="contact-card-desc text-content-secondary text-sm mb-5 leading-normal">Review my open-source code repositories, contributions, and commits.</p>
+            <a href="https://github.com/SareachGenZ" class="contact-action-link text-xs sm:text-sm font-semibold font-mono text-primary bg-surface px-3 py-1.5 rounded-md border border-stroke hover:border-primary hover:bg-primary-subtle transition-all break-all" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile (opens in a new tab)">
+              <span>github.com/SareachGenZ</span>
+              <span class="sr-only"> (opens in a new tab)</span>
+            </a>
           </div>
 
           <!-- LinkedIn Profile Card -->
-          <div class="contact-card">
-            <div class="contact-icon" aria-hidden="true">
+          <div class="contact-card card-surface p-8 text-center flex flex-col items-center hover:border-primary hover:shadow-card-hover hover:-translate-y-1 group">
+            <div class="contact-icon w-14 h-14 rounded-full bg-primary-subtle text-primary border border-primary/25 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" aria-hidden="true">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </div>
-            <h3 class="contact-card-title">LinkedIn</h3>
-            <p class="contact-card-desc">Connect with me on LinkedIn to explore professional networking.</p>
-            <a href="https://linkedin.com/in/[Your-LinkedIn]" class="contact-action-link" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn Profile">linkedin.com/in/[Your-LinkedIn]</a>
+            <h3 class="contact-card-title text-lg font-bold text-content-primary mb-1">LinkedIn</h3>
+            <p class="contact-card-desc text-content-secondary text-sm mb-5 leading-normal">Connect with me on LinkedIn to explore professional networking.</p>
+            <a href="https://linkedin.com/in/[Your-LinkedIn]" class="contact-action-link text-xs sm:text-sm font-semibold font-mono text-primary bg-surface px-3 py-1.5 rounded-md border border-stroke hover:border-primary hover:bg-primary-subtle transition-all break-all" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn Profile (opens in a new tab)">
+              <span>linkedin.com/in/[Your-LinkedIn]</span>
+              <span class="sr-only"> (opens in a new tab)</span>
+            </a>
           </div>
         </div>
       </div>
@@ -602,23 +620,23 @@
   <!-- ========================================================================
        8. Footer Section
        ======================================================================== -->
-  <footer id="footer" class="site-footer">
-    <div class="container footer-container">
+  <footer id="footer" class="site-footer py-12 border-t border-stroke bg-canvas transition-colors duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
       <div class="footer-info">
-        <p class="footer-copyright">&copy; 2026 [Your Name]. All rights reserved.</p>
-        <p class="footer-attribution">Built for the Datheon Full Stack Web Development Internship.</p>
+        <p class="footer-copyright text-sm text-content-secondary">&copy; 2026 [Your Name]. All rights reserved.</p>
+        <p class="footer-attribution text-xs text-content-secondary/70 mt-1">Built for the Datheon Full Stack Web Development Internship.</p>
       </div>
 
-      <div class="footer-links" aria-label="Footer Navigation">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-links flex flex-wrap gap-4 text-sm" aria-label="Footer Navigation">
+        <a href="#hero" class="text-content-secondary hover:text-primary transition-colors">Home</a>
+        <a href="#about" class="text-content-secondary hover:text-primary transition-colors">About</a>
+        <a href="#projects" class="text-content-secondary hover:text-primary transition-colors">Projects</a>
+        <a href="#resume" class="text-content-secondary hover:text-primary transition-colors">Resume</a>
+        <a href="#contact" class="text-content-secondary hover:text-primary transition-colors">Contact</a>
       </div>
 
       <div class="footer-back-to-top">
-        <a href="#header" class="back-to-top-btn" aria-label="Back to top of the page">
+        <a href="#header" class="back-to-top-btn inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-content-primary bg-surface border border-stroke px-3.5 py-1.5 rounded-full hover:border-primary hover:text-primary transition-all duration-150" aria-label="Back to top of the page">
           <span>Back to Top</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="12" y1="19" x2="12" y2="5"></line>

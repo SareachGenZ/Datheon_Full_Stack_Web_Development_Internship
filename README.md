@@ -3,7 +3,7 @@
 **Program:** Datheon Full Stack Web Development Internship  
 **Project:** Personal Developer Portfolio & Project Showcase  
 **Repository Name:** Datheon_Full_Stack_Web_Development_Internship  
-**Technology Stack:** HTML5, CSS3, Vanilla JavaScript (ES6+) — Zero External Dependencies  
+**Technology Stack:** HTML5, Tailwind CSS v3, Vanilla JavaScript (ES6+) — Zero Runtime Dependencies  
 **Accessibility Target:** WCAG 2.2 Level AA Compliant  
 **Target Hosting:** Vercel (Primary) / GitHub Pages / Netlify  
 **Live Production (Vercel):** https://datheon-portfolio-sareach.vercel.app/  
@@ -51,10 +51,15 @@ Developed as a core graduation milestone for the **Datheon Full Stack Web Develo
 ```text
 Portfolio/
 ├── index.html              # Main HTML5 entry point and semantic structure
+├── package.json            # Node.js build configuration & Tailwind dependencies
+├── tailwind.config.js      # Custom theme tokens & design system configuration
 ├── README.md               # Comprehensive project documentation and deployment guide
 ├── .gitignore              # Git ignore configuration
 ├── robots.txt              # Search engine crawler permissions
 ├── sitemap.xml             # XML sitemap configuration
+│
+├── src/
+│   └── input.css           # Tailwind source with semantic tokens and custom layers
 │
 ├── assets/
 │   ├── icons/              # Favicon and UI graphics
@@ -66,7 +71,7 @@ Portfolio/
 │       └── resume-placeholder.pdf
 │
 ├── css/
-│   └── style.css           # Design tokens, CSS reset, layout, components, and media queries
+│   └── style.css           # Compiled, minified Tailwind CSS output (~28 KB)
 │
 ├── js/
 │   └── main.js             # Vanilla JS: theme management, mobile drawer, smooth scroll, scrollspy
@@ -96,33 +101,40 @@ Portfolio/
 
 ## Local Development & Testing
 
-This project requires **no compilation, bundlers, or package installations**. You can run and inspect it locally with any static HTTP server.
+The pre-compiled CSS (`css/style.css`) is checked into the repository, allowing zero-setup local preview or fast deployment to any static host. If modifying styles, Tailwind CSS can be recompiled or watched via npm scripts.
 
 ### Prerequisites
 - Modern web browser: Google Chrome, Microsoft Edge, Mozilla Firefox, or Apple Safari.
-- Optional: Python 3, Node.js, or VS Code.
+- Node.js (v18+ recommended for compiling Tailwind CSS).
 
-### Option 1: Python HTTP Server (Recommended)
-Open a terminal in the project root directory and run:
+### Tailwind CSS Compilation
 ```bash
-# Python 3
-python -m http.server 8000
+# Install dependencies
+npm install
+
+# Build minified CSS for production
+npm run build:css
+
+# Watch for real-time CSS changes during development
+npm run watch:css
 ```
-Then visit: `http://localhost:8000`
 
-### Option 2: Node.js npx serve
+### Previewing the Website
+Open a terminal in the project root directory and run any static server:
 ```bash
+# Option 1: Python 3
+python -m http.server 8000
+
+# Option 2: Node.js npx serve
 npx serve .
 ```
-
-### Option 3: VS Code Live Server
-1. Install the **Live Server** extension in VS Code.
-2. Right-click [`index.html`](index.html) and select **Open with Live Server**.
+Then visit: `http://localhost:8000` or `http://localhost:3000`
 
 ### Running Code Quality & Syntax Audits
 - **JavaScript Syntax Verification:**
   ```bash
-  node --check js/main.js
+  npm test
+  # or: node --check js/main.js
   ```
 - **Automated Quality Checks:**
   Run the automated Node.js QA test suites to verify link targets, asset paths, WCAG contrast ratios, and responsive CSS rules.

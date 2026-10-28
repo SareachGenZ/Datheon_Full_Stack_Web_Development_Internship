@@ -53,6 +53,7 @@ function initTheme() {
 
   const applyTheme = (theme, persist = false) => {
     root.setAttribute('data-theme', theme);
+    root.classList.toggle('dark', theme === 'dark');
     
     if (themeToggleBtn) {
       const nextTheme = theme === 'dark' ? 'light' : 'dark';

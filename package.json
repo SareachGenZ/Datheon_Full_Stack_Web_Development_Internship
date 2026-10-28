@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "**Program:** Datheon Full Stack Web Development Internship   **Project:** Personal Developer Portfolio & Project Showcase   **Repository Name:** Datheon_Full_Stack_Web_Development_Internship   **Technology Stack:** HTML5, CSS3, Vanilla JavaScript (ES6+) — Zero External Dependencies   **Accessibility Target:** WCAG 2.2 Level AA Compliant   **Target Hosting:** Vercel (Primary) / GitHub Pages / Netlify   **Live Production (Vercel):** https://datheon-portfolio-sareach.vercel.app/   **Live Production (GitHub Pages):** https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "test": "node --check js/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SareachGenZ/Datheon_Full_Stack_Web_Development_Internship.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SareachGenZ/Datheon_Full_Stack_Web_Development_Internship/issues"
+  },
+  "homepage": "https://github.com/SareachGenZ/Datheon_Full_Stack_Web_Development_Internship#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
