@@ -478,11 +478,11 @@ Do not assume the repository already exists or that changes have already been pu
 
 Create checklist tasks for:
 
-- [ ] Select or confirm the static hosting provider.
-- [ ] Verify the production content.
-- [ ] Confirm the correct repository.
-- [ ] Configure publishing settings.
-- [ ] Confirm the correct output directory.
+- [x] Select or confirm the static hosting provider.
+- [x] Verify the production content.
+- [x] Confirm the correct repository.
+- [x] Configure publishing settings.
+- [x] Confirm the correct output directory.
 - [ ] Deploy the website.
 - [ ] Record the actual production URL.
 - [ ] Verify the production page loads.
