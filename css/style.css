@@ -119,27 +119,27 @@
   --color-text-secondary: #475569;      /* Slate 600 - Secondary text (> 5.5:1 ratio) */
   --color-text-muted: #64748b;          /* Slate 500 */
   
-  --color-accent: #0284c7;              /* Sky 600 (> 4.6:1 ratio) */
-  --color-accent-hover: #0369a1;        /* Sky 700 */
-  --color-accent-subtle: rgba(2, 132, 199, 0.08);
-  --color-accent-glow: rgba(2, 132, 199, 0.15);
-  --color-focus-ring: rgba(2, 132, 199, 0.4);
+  --color-accent: #0369a1;              /* Sky 700 - 5.67:1 contrast on canvas (WCAG AA > 4.5:1) */
+  --color-accent-hover: #075985;        /* Sky 800 - 7.56:1 contrast */
+  --color-accent-subtle: rgba(3, 105, 161, 0.08);
+  --color-accent-glow: rgba(3, 105, 161, 0.15);
+  --color-focus-ring: rgba(3, 105, 161, 0.4);
 
   /* Button Tokens (WCAG 2.2 AA Contrast Guarantee) */
-  --color-btn-primary-bg: #0284c7;
-  --color-btn-primary-text: #ffffff;    /* 4.63:1 contrast against #0284c7 */
-  --color-btn-primary-hover-bg: #0369a1;
+  --color-btn-primary-bg: #0369a1;      /* 5.93:1 contrast against white text */
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-hover-bg: #075985; /* 7.56:1 contrast against white text */
   --color-btn-primary-hover-text: #ffffff;
-  --color-btn-outline-text: #0284c7;
-  --color-btn-outline-hover-bg: rgba(2, 132, 199, 0.08);
-  --color-btn-outline-hover-text: #0369a1;
+  --color-btn-outline-text: #0369a1;
+  --color-btn-outline-hover-bg: rgba(3, 105, 161, 0.08);
+  --color-btn-outline-hover-text: #075985;
 
   --color-border: #e2e8f0;              /* Slate 200 */
-  --color-border-hover: #0284c7;        /* Sky 600 */
+  --color-border-hover: #0369a1;        /* Sky 700 */
   --color-border-subtle: rgba(15, 23, 42, 0.06);
 
   --color-status-active-bg: #e0f2fe;    /* Sky 100 */
-  --color-status-active-text: #0284c7;  /* Sky 600 */
+  --color-status-active-text: #0369a1;  /* Sky 700 (4.79:1 contrast on #e0f2fe) */
   --color-status-active-border: #bae6fd;
   --color-status-concept-bg: #f1f5f9;   /* Slate 100 */
   --color-status-concept-text: #475569; /* Slate 600 */
@@ -218,7 +218,7 @@ body {
 }
 
 [data-theme="light"] body {
-  background-image: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.04), transparent 45%);
+  background-image: radial-gradient(circle at 50% 0%, rgba(3, 105, 161, 0.04), transparent 45%);
 }
 
 img,
@@ -348,7 +348,7 @@ a:hover {
 }
 
 [data-theme="light"] .section-tag {
-  border-color: rgba(2, 132, 199, 0.2);
+  border-color: rgba(3, 105, 161, 0.2);
 }
 
 .section-title {
@@ -793,7 +793,7 @@ a:hover {
 }
 
 [data-theme="light"] .highlight-icon {
-  border-color: rgba(2, 132, 199, 0.2);
+  border-color: rgba(3, 105, 161, 0.2);
 }
 
 .highlight-body {
@@ -1194,7 +1194,7 @@ a:hover {
 }
 
 [data-theme="light"] .contact-icon {
-  border-color: rgba(2, 132, 199, 0.2);
+  border-color: rgba(3, 105, 161, 0.2);
 }
 
 .contact-card-title {
