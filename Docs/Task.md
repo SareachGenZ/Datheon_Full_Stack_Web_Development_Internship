@@ -484,7 +484,7 @@ Create checklist tasks for:
 - [x] Configure publishing settings.
 - [x] Confirm the correct output directory.
 - [x] Deploy the website (Published to GitHub master branch).
-- [x] Record the actual production URL (https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/).
+- [x] Record the actual production URL (Vercel: https://datheon-portfolio-sareach.vercel.app/ | GitHub Pages: https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/).
 - [x] Verify the production page loads.
 - [x] Verify navigation and interactions in production.
 - [x] Verify resume and project links.
