@@ -182,15 +182,15 @@ Do not invent completion percentages or report actual progress without evidence.
 
 Create checklist tasks for:
 
-- [ ] Review `PROJECT_PROPOSAL.md`.
-- [ ] Review `PRD.md`.
-- [ ] Review `Design.md`.
-- [ ] Review `Plan.md`.
-- [ ] Review the existing repository.
-- [ ] Identify missing or conflicting requirements.
-- [ ] Confirm the approved project scope.
-- [ ] Record unresolved questions.
-- [ ] Identify personal content and assets that are still missing.
+- [x] Review `PROJECT_PROPOSAL.md`.
+- [x] Review `PRD.md`.
+- [x] Review `Design.md`.
+- [x] Review `Plan.md`.
+- [x] Review the existing repository.
+- [x] Identify missing or conflicting requirements.
+- [x] Confirm the approved project scope.
+- [x] Record unresolved questions.
+- [x] Identify personal content and assets that are still missing.
 
 Include verification steps and dependencies.
 
@@ -200,15 +200,15 @@ Do not duplicate existing documentation unnecessarily.
 
 Create checklist tasks for:
 
-- [ ] Inspect the repository and Git status.
-- [ ] Confirm the repository structure.
-- [ ] Create missing project directories and files.
-- [ ] Establish the HTML entry point.
-- [ ] Establish CSS files.
-- [ ] Establish JavaScript files.
-- [ ] Establish asset directories.
-- [ ] Confirm local development works.
-- [ ] Confirm version control is functioning.
+- [x] Inspect the repository and Git status.
+- [x] Confirm the repository structure.
+- [x] Create missing project directories and files.
+- [x] Establish the HTML entry point.
+- [x] Establish CSS files.
+- [x] Establish JavaScript files.
+- [x] Establish asset directories.
+- [x] Confirm local development works.
+- [x] Confirm version control is functioning.
 
 Do not recreate existing files unnecessarily.
 
