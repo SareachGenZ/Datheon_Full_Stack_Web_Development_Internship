@@ -3,3 +3,4 @@ Allow: /
 
 # Sitemap URL will be finalized upon production deployment
 # Sitemap: https://[your-production-url]/sitemap.xml
+
