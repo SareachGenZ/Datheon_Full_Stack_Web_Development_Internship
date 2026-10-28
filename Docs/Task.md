@@ -388,29 +388,29 @@ Separate content-dependent tasks from tasks that can proceed without the missing
 
 Create checklist tasks for accessibility, including:
 
-- [ ] Semantic HTML review.
-- [ ] Heading hierarchy review.
-- [ ] Keyboard navigation.
-- [ ] Visible focus indicators.
-- [ ] Color contrast checks.
-- [ ] Accessible link and button names.
-- [ ] Image alternative text.
-- [ ] Mobile menu accessibility.
-- [ ] Theme toggle accessibility.
-- [ ] Reduced-motion behavior.
-- [ ] Contact form accessibility, if applicable.
+- [x] Semantic HTML review.
+- [x] Heading hierarchy review.
+- [x] Keyboard navigation.
+- [x] Visible focus indicators.
+- [x] Color contrast checks.
+- [x] Accessible link and button names.
+- [x] Image alternative text.
+- [x] Mobile menu accessibility.
+- [x] Theme toggle accessibility.
+- [x] Reduced-motion behavior.
+- [x] Contact form accessibility, if applicable (Not applicable - direct mailto and profile links per PRD).
 
 Create checklist tasks for SEO, including:
 
-- [ ] Page title.
-- [ ] Meta description.
-- [ ] Heading structure.
-- [ ] Favicon.
-- [ ] Social sharing metadata, if required.
-- [ ] Canonical URL, if appropriate.
-- [ ] Robots configuration, if appropriate.
-- [ ] Sitemap, if appropriate.
-- [ ] Production URL verification.
+- [x] Page title.
+- [x] Meta description.
+- [x] Heading structure.
+- [x] Favicon.
+- [x] Social sharing metadata, if required.
+- [x] Canonical URL, if appropriate.
+- [x] Robots configuration, if appropriate.
+- [x] Sitemap, if appropriate.
+- [x] Production URL verification (Configured with deployment instructions).
 
 Do not claim WCAG compliance or SEO success until the relevant checks have been performed.
 
