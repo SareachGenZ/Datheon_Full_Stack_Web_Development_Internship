@@ -346,15 +346,15 @@ Create tasks for each interaction required by the PRD.
 
 Potential tasks include:
 
-- [ ] Mobile menu behavior.
-- [ ] Smooth section navigation.
-- [ ] Theme switching.
-- [ ] Theme persistence, if required.
-- [ ] Accessible menu state updates.
-- [ ] Event handling.
-- [ ] Error prevention.
-- [ ] Keyboard interaction.
-- [ ] Reduced-motion support where applicable.
+- [x] Mobile menu behavior.
+- [x] Smooth section navigation.
+- [x] Theme switching.
+- [x] Theme persistence, if required.
+- [x] Accessible menu state updates.
+- [x] Event handling.
+- [x] Error prevention.
+- [x] Keyboard interaction.
+- [x] Reduced-motion support where applicable.
 
 Only include applicable features.
 
