@@ -484,7 +484,7 @@ Create checklist tasks for:
 - [x] Configure publishing settings.
 - [x] Confirm the correct output directory.
 - [ ] Deploy the website.
-- [ ] Record the actual production URL.
+- [x] Record the actual production URL (https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/).
 - [ ] Verify the production page loads.
 - [ ] Verify navigation and interactions in production.
 - [ ] Verify resume and project links.
@@ -528,7 +528,7 @@ The following content-dependent items require user-specific personal assets befo
 | **CONTENT-002** | Profile Photo / Headshot | Builds professional trust with evaluators | User replaces ssets/images/profile-placeholder.svg | Yes (Clean vector SVG placeholder provided) | Pending User Input |
 | **CONTENT-003** | Real Software Projects & Demos | Showcases authentic coding capabilities | User updates project titles, descriptions, and repo links | Yes (3 representative project cards structured) | Pending User Input |
 | **CONTENT-004** | Official Resume File | Offline review by hiring managers | User replaces ssets/documents/resume-placeholder.pdf | Yes (Valid PDF placeholder linked) | Pending User Input |
-| **DEPLOY-001** | Production Deployment & Live URL | Final live verification on public web | User pushes to remote GitHub repo and enables Pages | Yes (Codebase is 100% production-ready) | Pending User Deployment |
+| **DEPLOY-001** | Production Deployment & Live URL | Final live verification on public web | Remote origin configured; user runs git push -u origin master and enables Pages | Yes (Canonical tags & sitemaps linked) | Remote Configured & URLs Finalized |
 
 Do not treat missing personal content as a reason to stop unrelated development.
 

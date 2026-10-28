@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap URL will be finalized upon production deployment
-# Sitemap: https://[your-production-url]/sitemap.xml
-
+Sitemap: https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/sitemap.xml

@@ -138,7 +138,7 @@ npx serve .
    - **Branch:** master (or main) / (root).
 5. Click **Save**.
 6. Wait 1–2 minutes; your portfolio will be published at:
-   https://[your-username].github.io/Datheon_Full_Stack_Web_Development_Internship/
+   https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/
 
 ### Option B: Netlify
 1. Connect your GitHub repository to Netlify, or drag-and-drop the project folder to the Netlify dashboard.
@@ -162,7 +162,7 @@ Before publishing to production, update the clearly marked placeholder values wi
 - [ ] **Name & Title:** Replace [Your Name] and [Your Professional Headline] in [index.html](index.html) and [README.md](README.md).
 - [ ] **Profile Picture:** Replace ssets/images/profile-placeholder.svg with your actual headshot (.jpg, .png, or .webp).
 - [ ] **Social & Contact Links:**
-  - Replace https://github.com/[Your-GitHub] with your GitHub URL.
+  - GitHub Profile verified: https://github.com/SareachGenZ
   - Replace https://linkedin.com/in/[Your-LinkedIn] with your LinkedIn URL.
   - Replace mailto:[Your-Email] with your active email address.
 - [ ] **Projects:** Update project titles, descriptions, screenshots, and live demo links to reflect your own software accomplishments.
