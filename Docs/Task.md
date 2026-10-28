@@ -244,20 +244,20 @@ Only include sections required by the PRD.
 
 Create checklist tasks for:
 
-- [ ] CSS reset and base styles.
-- [ ] Design tokens.
-- [ ] Color palette.
-- [ ] Typography.
-- [ ] Spacing scale.
-- [ ] Layout containers.
-- [ ] Grid and flexbox patterns.
-- [ ] Buttons.
-- [ ] Links.
-- [ ] Cards.
-- [ ] Section headings.
-- [ ] Borders and shadows.
-- [ ] Focus states.
-- [ ] Consistent visual hierarchy.
+- [x] CSS reset and base styles.
+- [x] Design tokens.
+- [x] Color palette.
+- [x] Typography.
+- [x] Spacing scale.
+- [x] Layout containers.
+- [x] Grid and flexbox patterns.
+- [x] Buttons.
+- [x] Links.
+- [x] Cards.
+- [x] Section headings.
+- [x] Borders and shadows.
+- [x] Focus states.
+- [x] Consistent visual hierarchy.
 
 Use the design system in `Design.md`.
 
