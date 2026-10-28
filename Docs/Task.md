@@ -485,13 +485,13 @@ Create checklist tasks for:
 - [x] Confirm the correct output directory.
 - [x] Deploy the website (Published to GitHub master branch).
 - [x] Record the actual production URL (https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/).
-- [ ] Verify the production page loads.
-- [ ] Verify navigation and interactions in production.
-- [ ] Verify resume and project links.
-- [ ] Verify images and other assets.
-- [ ] Check for production console errors.
-- [ ] Resolve deployment defects.
-- [ ] Recheck the website after fixes.
+- [x] Verify the production page loads.
+- [x] Verify navigation and interactions in production.
+- [x] Verify resume and project links.
+- [x] Verify images and other assets.
+- [x] Check for production console errors.
+- [x] Resolve deployment defects.
+- [x] Recheck the website after fixes.
 
 Do not invent a production URL.
 
@@ -546,7 +546,7 @@ Include:
 - [x] SEO essentials have been reviewed.
 - [x] Relevant performance checks have been performed.
 - [x] Blocking defects have been resolved.
-- [ ] Production deployment has been verified.
+- [x] Production deployment has been verified.
 - [x] The README is complete.
 - [x] Repository contents have been reviewed.
 - [x] Known limitations are documented.
