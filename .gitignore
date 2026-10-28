@@ -8,6 +8,8 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+*.tmp
+*.bak
 
 # Logs & Temporary Files
 *.log
@@ -15,7 +17,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Environment & Secrets (prevention)
+# Node / Dependency Protection (Zero Dependency Stack)
+node_modules/
+
+# Environment & Secrets (Prevention)
 .env
 .env.local
 .env.*.local

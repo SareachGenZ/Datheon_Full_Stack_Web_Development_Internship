@@ -459,16 +459,16 @@ Include:
 
 Create tasks for:
 
-- [ ] Confirm the repository name and destination.
-- [ ] Review the Git working tree.
-- [ ] Remove temporary and unnecessary files.
-- [ ] Check for accidentally committed secrets.
-- [ ] Verify project assets are included.
-- [ ] Update `README.md`.
-- [ ] Document local development steps.
-- [ ] Document deployment instructions.
-- [ ] Confirm repository contents are appropriate for public access.
-- [ ] Commit and push changes as appropriate.
+- [x] Confirm the repository name and destination.
+- [x] Review the Git working tree.
+- [x] Remove temporary and unnecessary files.
+- [x] Check for accidentally committed secrets.
+- [x] Verify project assets are included.
+- [x] Update `README.md`.
+- [x] Document local development steps.
+- [x] Document deployment instructions.
+- [x] Confirm repository contents are appropriate for public access.
+- [x] Commit and push changes as appropriate.
 
 Use `Datheon_Full_Stack_Web_Development_Internship` if it is confirmed as the intended repository name in the existing project documentation. Otherwise, identify the repository name as an item to confirm.
 
