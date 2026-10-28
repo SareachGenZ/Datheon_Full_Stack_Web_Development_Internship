@@ -20,32 +20,33 @@ Developed as a core graduation milestone for the **Datheon Full Stack Web Develo
 ## Key Features
 
 ### 1. Semantic Structure & Accessibility (WCAG 2.2 AA)
-- **Native HTML5 Landmarks:** Structured with <header>, <nav>, <main>, <section>, <article>, and <footer> for assistive technologies.
-- **Heading Hierarchy:** Strictly sequential headings (h1 through h4) with zero skipped levels.
-- **Keyboard Navigation:** Includes an accessible skip-to-content link (.skip-link), visible :focus-visible focus indicators with outline offsets and focus rings, and programmatic focus routing upon section navigation.
-- **High-Contrast Palette:** Contrast ratios exceeding 17:1 for body text and 5.9:1 to 8.3:1 for interactive controls in both dark and light modes.
-- **Motion Sensitivity:** Respects prefers-reduced-motion across CSS transitions and JavaScript scrolling logic.
+- **Native HTML5 Landmarks:** Structured with `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` for assistive technologies.
+- **Heading Hierarchy:** Strictly sequential headings (`h1` through `h4`) with zero skipped levels.
+- **Keyboard Navigation:** Includes an accessible skip-to-content link (`.skip-link`), visible `:focus-visible` focus indicators with outline offsets and focus rings, and programmatic focus routing upon section navigation.
+- **High-Contrast Palette:** Mathematical contrast ratios exceeding 17:1 for body text and 5.67:1 to 9.07:1 for interactive controls in both dark and light modes.
+- **Motion Sensitivity:** Respects `prefers-reduced-motion` across CSS transitions and JavaScript scrolling logic.
 
 ### 2. Design System & Dynamic Theming
 - **CSS Custom Properties:** Centralized design tokens for colors, typography, spacing, shadows, and layout containers.
-- **Light & Dark Themes:** Smooth theme toggle supporting OS preferences (prefers-color-scheme) with persistent localStorage synchronization.
+- **Light & Dark Themes:** Smooth theme toggle supporting OS preferences (`prefers-color-scheme`) with persistent `localStorage` synchronization.
 - **Touch-Friendly Controls:** All buttons, toggles, and interactive links meet or exceed the 44×44px minimum touch target recommendation.
+- **Clean Modern Aesthetics:** Subtle obsidian canvas with ambient glow in dark theme, crisp zinc surfaces in light theme, and live availability badge with pulsing indicator.
 
 ### 3. Responsive Layout
 - **Multi-Device Adaptability:** Engineered across 4 key breakpoints (1024px desktop, 868px tablet, 480px mobile, 340px narrow screens).
 - **Horizontal Overflow Prevention:** Strict container box-sizing and overflow control ensuring zero unwanted horizontal scrollbars.
-- **Mobile Navigation Drawer:** Accessible slide-out menu with outside-click dismissal, auto-close on link selection, and Escape key support.
+- **Mobile Navigation Drawer:** Accessible slide-out menu with outside-click dismissal, auto-close on link selection, and `Escape` key support.
 
 ### 4. Performance & Search Optimization
 - **Zero Dependencies:** Pure vanilla stack with no node modules, no bundlers, and no external CDN dependencies.
 - **Lightweight Payload:** Total initial site bundle is **~64 KB**, delivering near-instant load times.
-- **SEO & Social Sharing:** Fully configured Open Graph, Twitter Cards, <meta name="description">, obots.txt, and sitemap.xml.
+- **SEO & Social Sharing:** Fully configured Open Graph, Twitter Cards, `<meta name="description">`, `<meta name="color-scheme" content="light dark">`, `robots.txt`, and `sitemap.xml`.
 
 ---
 
 ## Project Structure
 
-`	ext
+```text
 Portfolio/
 ├── index.html              # Main HTML5 entry point and semantic structure
 ├── README.md               # Comprehensive project documentation and deployment guide
@@ -74,20 +75,20 @@ Portfolio/
     ├── Design.md           # Visual design tokens, component specifications, and accessibility rules
     ├── Plan.md             # Architecture, implementation roadmap, and testing strategy
     └── Task.md             # Actionable phased task checklist
-`
+```
 
 ---
 
 ## Page Sections Breakdown
 
-1. **Navigation Bar (#header):** Brand logo, desktop navigation links, theme toggle (Sun/Moon), and mobile drawer button.
-2. **Hero Section (#hero):** Personal greeting, developer headline, introductory summary, primary CTA (*View My Projects*), secondary CTA (*Download Resume*), social profile links, and profile image.
-3. **About Me (#about):** Professional background, engineering philosophy, and three highlight cards (*Focus Areas*, *Development Values*, *Current Objective*).
-4. **Technical Skills (#skills):** Categorized skill badges covering Frontend Development, Languages & Fundamentals, Tools & Platforms, and Standards & Best Practices.
-5. **Featured Projects (#projects):** Project showcase cards with preview images, technology tags, status indicators (*Active Project*, *Planned Concept*), source code links, and live demo anchors.
-6. **Resume & Qualifications (#resume):** Academic education details, Datheon internship experience, and a dedicated resume download card.
-7. **Contact (#contact):** Direct communication cards for Email (mailto:), GitHub profile, and LinkedIn networking.
-8. **Footer (#footer):** Copyright notice, internship attribution, auxiliary navigation links, and an accessible *Back to Top* button.
+1. **Navigation Bar (`#header`):** Brand logo, desktop navigation links, theme toggle (Sun/Moon), and mobile drawer button.
+2. **Hero Section (`#hero`):** Live availability badge, personal greeting, developer headline, introductory summary, primary CTA (*View My Projects*), secondary CTA (*Download Resume*), social profile links, and profile image.
+3. **About Me (`#about`):** Professional background, engineering philosophy, and three highlight cards (*Focus Areas*, *Development Values*, *Current Objective*) with SVG icon containers.
+4. **Technical Skills (`#skills`):** Categorized skill badges covering Frontend Development, Languages & Fundamentals, Tools & Platforms, and Standards & Best Practices.
+5. **Featured Projects (`#projects`):** Project showcase cards with 16:9 preview images, technology tags, status indicators (*Active Project*, *Planned Concept*), source code links, and live demo anchors.
+6. **Resume & Qualifications (`#resume`):** Academic education details, Datheon internship experience arranged in a connected timeline track, and a dedicated resume download card.
+7. **Contact (`#contact`):** Direct communication cards for Email (`mailto:`), GitHub profile, and LinkedIn networking.
+8. **Footer (`#footer`):** Copyright notice, internship attribution, auxiliary navigation links, and an accessible *Back to Top* button.
 
 ---
 
@@ -101,28 +102,28 @@ This project requires **no compilation, bundlers, or package installations**. Yo
 
 ### Option 1: Python HTTP Server (Recommended)
 Open a terminal in the project root directory and run:
-`ash
+```bash
 # Python 3
 python -m http.server 8000
-`
-Then visit: http://localhost:8000
+```
+Then visit: `http://localhost:8000`
 
 ### Option 2: Node.js npx serve
-`ash
+```bash
 npx serve .
-`
+```
 
 ### Option 3: VS Code Live Server
 1. Install the **Live Server** extension in VS Code.
-2. Right-click [index.html](index.html) and select **Open with Live Server**.
+2. Right-click [`index.html`](index.html) and select **Open with Live Server**.
 
 ### Running Code Quality & Syntax Audits
 - **JavaScript Syntax Verification:**
-  `ash
+  ```bash
   node --check js/main.js
-  `
+  ```
 - **Automated Quality Checks:**
-  The project includes automated PowerShell verification scripts testing link targets, asset paths, WCAG contrast ratios, and responsive CSS rules.
+  Run the automated Node.js QA test suites to verify link targets, asset paths, WCAG contrast ratios, and responsive CSS rules.
 
 ---
 
@@ -130,27 +131,27 @@ npx serve .
 
 ### Option A: GitHub Pages (Recommended)
 1. Push this repository to your GitHub account under the repository name:
-   Datheon_Full_Stack_Web_Development_Internship
+   `Datheon_Full_Stack_Web_Development_Internship`
 2. Navigate to your repository on GitHub.
 3. Go to **Settings** > **Pages** (under Code and automation in the sidebar).
 4. Under **Build and deployment**:
    - **Source:** Deploy from a branch.
-   - **Branch:** master (or main) / (root).
+   - **Branch:** `master` (or `main`) / `(root)`.
 5. Click **Save**.
 6. Wait 1–2 minutes; your portfolio will be published at:
-   https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/
+   `https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/`
 
 ### Option B: Netlify
 1. Connect your GitHub repository to Netlify, or drag-and-drop the project folder to the Netlify dashboard.
 2. Build settings:
    - **Build command:** *(leave empty)*
-   - **Publish directory:** . (root)
+   - **Publish directory:** `.` (root)
 3. Click **Deploy Site**.
 
 ### Option C: Vercel
 1. Import your GitHub repository into Vercel.
 2. Framework Preset: **Other**.
-3. Root Directory: ./.
+3. Root Directory: `./`.
 4. Click **Deploy**.
 
 ---
@@ -159,17 +160,17 @@ npx serve .
 
 Before publishing to production, update the clearly marked placeholder values with your authentic personal details:
 
-- [ ] **Name & Title:** Replace [Your Name] and [Your Professional Headline] in [index.html](index.html) and [README.md](README.md).
-- [ ] **Profile Picture:** Replace ssets/images/profile-placeholder.svg with your actual headshot (.jpg, .png, or .webp).
+- [ ] **Name & Title:** Replace `[Your Name]` and `[Your Professional Headline]` in [`index.html`](index.html) and [`README.md`](README.md).
+- [ ] **Profile Picture:** Replace `assets/images/profile-placeholder.svg` with your actual headshot (`.jpg`, `.png`, or `.webp`).
 - [ ] **Social & Contact Links:**
-  - GitHub Profile verified: https://github.com/SareachGenZ
-  - Replace https://linkedin.com/in/[Your-LinkedIn] with your LinkedIn URL.
-  - Replace mailto:[Your-Email] with your active email address.
+  - GitHub Profile verified: `https://github.com/SareachGenZ`
+  - Replace `https://linkedin.com/in/[Your-LinkedIn]` with your LinkedIn URL.
+  - Replace `mailto:[Your-Email]` with your active email address.
 - [ ] **Projects:** Update project titles, descriptions, screenshots, and live demo links to reflect your own software accomplishments.
-- [ ] **Resume:** Replace ssets/documents/resume-placeholder.pdf with your updated professional resume PDF.
+- [ ] **Resume:** Replace `assets/documents/resume-placeholder.pdf` with your updated professional resume PDF.
 - [ ] **SEO & Domain Configuration:**
-  - Update sitemap.xml with your published production URL.
-  - Uncomment and update the canonical link tag in [index.html](index.html).
+  - Verify `sitemap.xml` with your published production URL.
+  - Verify the canonical link tag in [`index.html`](index.html).
 
 ---
 
