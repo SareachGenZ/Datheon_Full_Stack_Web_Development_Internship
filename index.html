@@ -3,37 +3,409 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal Developer Portfolio & Project Showcase - Datheon Full Stack Web Development Internship">
-  <title>[Your Name] | Developer Portfolio</title>
+  <meta name="description" content="Personal Developer Portfolio & Project Showcase - Showcasing frontend web development, responsive applications, technical skills, and projects.">
+  <meta name="author" content="[Your Name]">
   
+  <!-- Open Graph / Social Sharing Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[Your Name] | Developer Portfolio & Project Showcase">
+  <meta property="og:description" content="Explore my completed web development projects, technical skills, and resume.">
+  <meta property="og:image" content="assets/images/project-placeholder.svg">
+
+  <title>[Your Name] | Developer Portfolio & Project Showcase</title>
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  
-  <!-- CSS Stylesheets -->
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- JavaScript (Deferred) -->
+
+  <!-- Deferred JavaScript -->
   <script defer src="js/main.js"></script>
 </head>
 <body>
+  <!-- Accessible Skip Link for Keyboard Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       1. Navigation Header
+       ======================================================================== -->
   <header id="header" class="site-header">
-    <nav class="nav-container" aria-label="Primary Navigation">
-      <a href="#hero" class="nav-logo">[Your Name]</a>
-    </nav>
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="[Your Name] - Home">
+        <span class="logo-text">[Your Name]</span>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary Navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls: Theme Switcher & Mobile Menu Trigger -->
+      <div class="nav-actions">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light theme" title="Toggle theme">
+          <span class="theme-icon" aria-hidden="true">☀️</span>
+        </button>
+
+        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+          <span class="hamburger-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
   </header>
 
+  <!-- ========================================================================
+       Main Content Landmark
+       ======================================================================== -->
   <main id="main-content">
-    <section id="hero" class="section hero-section" aria-label="Introduction">
-      <div class="container">
-        <h1 class="hero-title">[Your Name]</h1>
-        <p class="hero-subtitle">[Your Professional Headline]</p>
+    
+    <!-- ======================================================================
+         2. Hero Section
+         ====================================================================== -->
+    <section id="hero" class="section hero-section" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 id="hero-title" class="hero-title">[Your Name]</h1>
+          <p class="hero-subtitle">[Your Professional Headline]</p>
+          <p class="hero-description">
+            Passionate about crafting modern, responsive, and accessible web experiences. 
+            Currently developing full-stack web solutions as part of the Datheon Internship Program.
+          </p>
+          
+          <!-- Hero Calls to Action -->
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="assets/documents/resume-placeholder.pdf" class="btn btn-secondary" download="Resume-[Your-Name].pdf">Download Resume</a>
+          </div>
+
+          <!-- Hero Social Links -->
+          <div class="hero-socials" aria-label="Social and Professional Profiles">
+            <a href="https://github.com/[Your-GitHub]" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/[Your-LinkedIn]" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:[Your-Email]" class="social-link" aria-label="Send Email">
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/images/profile-placeholder.svg" alt="[Your Name] profile photo" width="220" height="220" class="hero-avatar">
+        </div>
       </div>
     </section>
+
+    <!-- ======================================================================
+         3. About Me Section
+         ====================================================================== -->
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-title" class="section-title">About Me</h2>
+          <p class="section-subtitle">Background, passions, and development philosophy</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am an aspiring full-stack software developer committed to writing clean, maintainable, and standards-compliant code. 
+              With a strong foundation in modern web technologies, I focus on building accessible, user-friendly digital products that solve practical problems.
+            </p>
+            <p>
+              My journey involves working across both frontend interface design and structured software architecture. 
+              I value simplicity, continuous learning, and thorough testing to ensure software reliability across diverse devices.
+            </p>
+            <p>
+              Currently participating in the Datheon Full Stack Web Development Internship, I am focused on mastering modern web standards, 
+              responsive user interfaces, and modular JavaScript architecture.
+            </p>
+          </div>
+
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <h3 class="highlight-title">Focus Areas</h3>
+              <p class="highlight-desc">Frontend architecture, responsive design, component development, and user accessibility.</p>
+            </div>
+            <div class="highlight-card">
+              <h3 class="highlight-title">Development Values</h3>
+              <p class="highlight-desc">Semantic structure, cross-browser compatibility, web performance, and clean documentation.</p>
+            </div>
+            <div class="highlight-card">
+              <h3 class="highlight-title">Current Objective</h3>
+              <p class="highlight-desc">Expanding full-stack engineering skills and delivering verified, production-ready web applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. Technical Skills Section
+         ====================================================================== -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="skills-title" class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Core languages, technologies, and developer tooling</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Frontend Technologies -->
+          <div class="skills-category">
+            <h3 class="category-title">Frontend Development</h3>
+            <ul class="skills-list" role="list">
+              <li class="skill-badge">HTML5 Semantic Markup</li>
+              <li class="skill-badge">CSS3 & Responsive Layouts</li>
+              <li class="skill-badge">Flexbox & CSS Grid</li>
+              <li class="skill-badge">Vanilla JavaScript (ES6+)</li>
+              <li class="skill-badge">DOM Manipulation</li>
+            </ul>
+          </div>
+
+          <!-- Category 2: Programming Fundamentals -->
+          <div class="skills-category">
+            <h3 class="category-title">Languages & Fundamentals</h3>
+            <ul class="skills-list" role="list">
+              <li class="skill-badge">JavaScript</li>
+              <li class="skill-badge">Object-Oriented Programming</li>
+              <li class="skill-badge">Data Structures</li>
+              <li class="skill-badge">Asynchronous Programming</li>
+            </ul>
+          </div>
+
+          <!-- Category 3: Tools & Platforms -->
+          <div class="skills-category">
+            <h3 class="category-title">Tools & Platforms</h3>
+            <ul class="skills-list" role="list">
+              <li class="skill-badge">Git & GitHub</li>
+              <li class="skill-badge">VS Code</li>
+              <li class="skill-badge">Chrome / Edge DevTools</li>
+              <li class="skill-badge">Static Hosting (Pages / Vercel)</li>
+            </ul>
+          </div>
+
+          <!-- Category 4: Standards & Practices -->
+          <div class="skills-category">
+            <h3 class="category-title">Standards & Best Practices</h3>
+            <ul class="skills-list" role="list">
+              <li class="skill-badge">Web Accessibility (WCAG 2.2 AA)</li>
+              <li class="skill-badge">Mobile-First Design</li>
+              <li class="skill-badge">Performance Optimization</li>
+              <li class="skill-badge">Cross-Browser Testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Featured Projects Section
+         ====================================================================== -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="projects-title" class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Selected development work and technical project demonstrations</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Portfolio -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img src="assets/images/project-placeholder.svg" alt="Personal Developer Portfolio project screenshot" loading="lazy" width="600" height="400" class="project-img">
+              <span class="project-badge status-active">Active Project</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Personal Developer Portfolio</h3>
+              <p class="project-description">
+                A fully responsive, accessible personal portfolio website engineered with pure HTML5, CSS3, and Vanilla JavaScript. Features theme switching, smooth scrolling, and mobile drawer navigation.
+              </p>
+              <ul class="project-tags" role="list" aria-label="Technologies used in Personal Developer Portfolio">
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">Vanilla JS</li>
+                <li class="tag">WCAG 2.2 AA</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/[Your-GitHub]/[Your-Repo]" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <a href="#hero" class="btn btn-primary">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Task Management Application -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img src="assets/images/project-placeholder.svg" alt="Task Management Web App screenshot" loading="lazy" width="600" height="400" class="project-img">
+              <span class="project-badge status-concept">Planned Concept</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Task Management Web App</h3>
+              <p class="project-description">
+                A streamlined task tracker providing status sorting, priority filtering, and client-side data persistence with localStorage. Designed for productivity and responsive task management.
+              </p>
+              <ul class="project-tags" role="list" aria-label="Technologies used in Task Management Web App">
+                <li class="tag">JavaScript</li>
+                <li class="tag">Web Storage API</li>
+                <li class="tag">CSS Grid</li>
+                <li class="tag">Responsive UI</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/[Your-GitHub]" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <a href="#projects" class="btn btn-secondary">Project Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Weather Dashboard -->
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img src="assets/images/project-placeholder.svg" alt="Weather Dashboard screenshot" loading="lazy" width="600" height="400" class="project-img">
+              <span class="project-badge status-concept">Planned Concept</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Weather Forecast Dashboard</h3>
+              <p class="project-description">
+                A dynamic weather application communicating with external meteorological REST APIs to present real-time climate conditions, multi-day forecasts, and atmospheric indicators.
+              </p>
+              <ul class="project-tags" role="list" aria-label="Technologies used in Weather Forecast Dashboard">
+                <li class="tag">Fetch API</li>
+                <li class="tag">Async/Await</li>
+                <li class="tag">REST API</li>
+                <li class="tag">CSS Flexbox</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/[Your-GitHub]" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <a href="#projects" class="btn btn-secondary">Project Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. Resume Section
+         ====================================================================== -->
+    <section id="resume" class="section resume-section" aria-labelledby="resume-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="resume-title" class="section-title">Resume & Qualifications</h2>
+          <p class="section-subtitle">Academic background, professional trajectory, and downloadable credentials</p>
+        </div>
+
+        <div class="resume-layout">
+          <div class="resume-summary">
+            <div class="resume-block">
+              <h3 class="block-title">Education</h3>
+              <div class="resume-item">
+                <h4 class="item-role">[Degree / Major in Computer Science or Software Engineering]</h4>
+                <p class="item-institution">[University or College Name]</p>
+                <p class="item-period">[Expected Graduation / Study Period]</p>
+                <p class="item-detail">Relevant coursework: Web Development, Algorithms, Database Systems, Software Engineering.</p>
+              </div>
+            </div>
+
+            <div class="resume-block">
+              <h3 class="block-title">Experience & Training</h3>
+              <div class="resume-item">
+                <h4 class="item-role">Full Stack Web Development Intern</h4>
+                <p class="item-institution">Datheon Internship Program</p>
+                <p class="item-period">October 2026 – Present</p>
+                <p class="item-detail">Designing and building responsive, accessible web applications adhering to modern industry standards.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-download-card">
+            <div class="download-content">
+              <h3>Need a Copy of My Resume?</h3>
+              <p>Download the latest version of my full resume in PDF format for offline review and recruitment consideration.</p>
+              <a href="assets/documents/resume-placeholder.pdf" class="btn btn-primary btn-large" download="Resume-[Your-Name].pdf" aria-label="Download Resume in PDF format">
+                <span>Download Resume (PDF)</span>
+              </a>
+              <p class="download-note">Format: PDF | Verified File</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. Contact Section
+         ====================================================================== -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="contact-title" class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in collaborating, hiring, or discussing a project? Let's connect.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Email Card -->
+          <div class="contact-card">
+            <div class="contact-icon" aria-hidden="true">✉️</div>
+            <h3 class="contact-card-title">Email</h3>
+            <p class="contact-card-desc">Send me an email for professional inquiries or internship evaluation.</p>
+            <a href="mailto:[Your-Email]" class="contact-action-link" aria-label="Send email to [Your-Email]">[Your-Email]</a>
+          </div>
+
+          <!-- GitHub Profile Card -->
+          <div class="contact-card">
+            <div class="contact-icon" aria-hidden="true">🐙</div>
+            <h3 class="contact-card-title">GitHub</h3>
+            <p class="contact-card-desc">Review my open-source code repositories, contributions, and commits.</p>
+            <a href="https://github.com/[Your-GitHub]" class="contact-action-link" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile">github.com/[Your-GitHub]</a>
+          </div>
+
+          <!-- LinkedIn Profile Card -->
+          <div class="contact-card">
+            <div class="contact-icon" aria-hidden="true">💼</div>
+            <h3 class="contact-card-title">LinkedIn</h3>
+            <p class="contact-card-desc">Connect with me on LinkedIn to explore professional networking.</p>
+            <a href="https://linkedin.com/in/[Your-LinkedIn]" class="contact-action-link" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn Profile">linkedin.com/in/[Your-LinkedIn]</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ========================================================================
+       8. Footer Section
+       ======================================================================== -->
   <footer id="footer" class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 [Your Name]. All rights reserved.</p>
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p class="footer-copyright">&copy; 2026 [Your Name]. All rights reserved.</p>
+        <p class="footer-attribution">Built for the Datheon Full Stack Web Development Internship.</p>
+      </div>
+
+      <div class="footer-links" aria-label="Footer Navigation">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-back-to-top">
+        <a href="#header" class="back-to-top-btn" aria-label="Back to top of the page">
+          <span>Back to Top &uarr;</span>
+        </a>
+      </div>
     </div>
   </footer>
 </body>
