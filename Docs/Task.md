@@ -528,7 +528,7 @@ The following content-dependent items require user-specific personal assets befo
 | **CONTENT-002** | Profile Photo / Headshot | Builds professional trust with evaluators | User replaces ssets/images/profile-placeholder.svg | Yes (Clean vector SVG placeholder provided) | Pending User Input |
 | **CONTENT-003** | Real Software Projects & Demos | Showcases authentic coding capabilities | User updates project titles, descriptions, and repo links | Yes (3 representative project cards structured) | Pending User Input |
 | **CONTENT-004** | Official Resume File | Offline review by hiring managers | User replaces ssets/documents/resume-placeholder.pdf | Yes (Valid PDF placeholder linked) | Pending User Input |
-| **DEPLOY-001** | Production Deployment & Live URL | Final live verification on public web | Master branch pushed to GitHub; GitHub Pages deployment verified | Yes (Live at https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/) | Verified Live (HTTP 200 OK) |
+| **DEPLOY-001** | Production Deployment & Live URL | Final live verification on public web | Master branch pushed to GitHub; Vercel and GitHub Pages deployments verified | Yes (Vercel: https://datheon-portfolio-sareach.vercel.app/ | GitHub Pages: https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/) | Verified Live (HTTP 200 OK) |
 
 ### Comprehensive QA Review Results (October 28, 2026)
 

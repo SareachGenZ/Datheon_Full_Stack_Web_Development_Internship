@@ -5,7 +5,9 @@
 **Repository Name:** Datheon_Full_Stack_Web_Development_Internship  
 **Technology Stack:** HTML5, CSS3, Vanilla JavaScript (ES6+) — Zero External Dependencies  
 **Accessibility Target:** WCAG 2.2 Level AA Compliant  
-**Target Hosting:** GitHub Pages / Netlify / Vercel  
+**Target Hosting:** Vercel (Primary) / GitHub Pages / Netlify  
+**Live Production (Vercel):** https://datheon-portfolio-sareach.vercel.app/  
+**Live Production (GitHub Pages):** https://sareachgenz.github.io/Datheon_Full_Stack_Web_Development_Internship/  
 
 ---
 
