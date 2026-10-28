@@ -324,19 +324,19 @@ Adapt all these checklists to the actual requirements. Do not fabricate personal
 
 Create tasks for:
 
-- [ ] Mobile layout.
-- [ ] Tablet layout.
-- [ ] Desktop layout.
-- [ ] Navigation responsiveness.
-- [ ] Typography scaling.
-- [ ] Section spacing.
-- [ ] Project grid behavior.
-- [ ] Image sizing.
-- [ ] Button sizing and wrapping.
-- [ ] Footer layout.
-- [ ] Horizontal overflow checks.
-- [ ] Touch-target usability.
-- [ ] Testing at narrow viewport widths.
+- [x] Mobile layout.
+- [x] Tablet layout.
+- [x] Desktop layout.
+- [x] Navigation responsiveness.
+- [x] Typography scaling.
+- [x] Section spacing.
+- [x] Project grid behavior.
+- [x] Image sizing.
+- [x] Button sizing and wrapping.
+- [x] Footer layout.
+- [x] Horizontal overflow checks.
+- [x] Touch-target usability.
+- [x] Testing at narrow viewport widths.
 
 Use the breakpoints and layout behavior defined in `Design.md`.
 

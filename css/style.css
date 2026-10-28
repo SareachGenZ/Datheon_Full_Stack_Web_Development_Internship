@@ -952,41 +952,227 @@ a:hover {
 }
 
 /* ==========================================================================
-   15. Responsive Layout Adaptations
+   15. Responsive Layout Adaptations (Mobile-First & Breakpoints)
    ========================================================================== */
+
+/* Prevent horizontal overflow globally */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Touch-target optimization for touch devices */
+.nav-link,
+.social-link,
+.contact-action-link,
+.back-to-top-btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* --- Tablet Breakpoint (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --container-max-width: 920px;
+    --spacing-3xl: 3.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .hero-container {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+/* --- Mobile / Small Tablet Breakpoint (max-width: 868px) --- */
 @media (max-width: 868px) {
+  :root {
+    --spacing-3xl: 3rem;
+    --spacing-2xl: 2.25rem;
+  }
+
+  .section {
+    padding-block: var(--spacing-2xl);
+  }
+
   .hero-container,
   .about-grid,
   .resume-layout {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
+    text-align: center;
   }
 
   .hero-visual {
     order: -1;
+    margin-bottom: var(--spacing-md);
   }
 
+  .hero-avatar {
+    width: min(180px, 50vw);
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero-description {
+    margin-inline: auto;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  /* Mobile Navigation Drawer */
   .mobile-menu-btn {
     display: flex;
+    min-height: 44px;
+    min-width: 44px;
   }
 
   .primary-nav {
-    display: none; /* Controlled by JavaScript drawer in Phase 6 */
+    display: none; /* Inactive by default */
+  }
+
+  /* When drawer is open via JavaScript */
+  .primary-nav.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 65px);
+    background-color: var(--color-bg-primary);
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-2xl) var(--spacing-md);
+    z-index: 99;
+    overflow-y: auto;
+    animation: fadeIn var(--transition-fast) forwards;
+  }
+
+  .primary-nav.is-open .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    width: 100%;
+  }
+
+  .primary-nav.is-open .nav-link {
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-sm) var(--spacing-md);
+    width: 100%;
+    text-align: center;
+    border-radius: var(--border-radius-md);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
   .footer-container {
     flex-direction: column;
     text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
+/* --- Narrow Mobile Viewport (max-width: 480px) --- */
 @media (max-width: 480px) {
+  :root {
+    --spacing-3xl: 2.5rem;
+    --spacing-2xl: 1.75rem;
+    --spacing-xl: 1.25rem;
+  }
+
+  .container {
+    padding-inline: var(--spacing-sm);
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 8vw, 2.25rem);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
   .hero-ctas {
     flex-direction: column;
     width: 100%;
   }
 
-  .btn {
+  .hero-ctas .btn {
     width: 100%;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-links .btn {
+    width: 100%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .resume-download-card {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .resume-download-card .btn-large {
+    width: 100%;
+  }
+}
+
+/* --- Extra Small Viewport (320px) Safety --- */
+@media (max-width: 340px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .nav-logo {
+    font-size: var(--font-size-base);
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
