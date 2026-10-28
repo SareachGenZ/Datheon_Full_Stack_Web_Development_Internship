@@ -374,10 +374,10 @@ Create checklist tasks for:
 - [ ] Resume file.
 - [ ] Contact information.
 - [ ] Social media links.
-- [ ] Favicon.
-- [ ] Alternative text for meaningful images.
-- [ ] Image optimization.
-- [ ] Broken asset checks.
+- [x] Favicon.
+- [x] Alternative text for meaningful images.
+- [x] Image optimization.
+- [x] Broken asset checks.
 - [ ] Removal or replacement of temporary placeholders before release.
 
 If information is unavailable, keep the corresponding task blocked or pending rather than inventing content.
